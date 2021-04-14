@@ -40,10 +40,6 @@
             var password = document.getElementById("password").value;
             var email = document.getElementById("email").value;
 
-            if (password.length != 6) {
-                alert("password must contains atleast 6 characters ")
-            }
-            else {
 
                 function UserData(userName, firstName, lastName, password, email) {
 
@@ -63,7 +59,7 @@
                 localStorage.setItem("users", JSON.stringify(users))
             }
 
-        }
+      
     </script>
 
 
