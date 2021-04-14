@@ -1,0 +1,40 @@
+#main {
+    width: 100%;
+    margin-top: 8%;
+}
+
+img {
+    margin-top: 13px;
+    width: 5%;
+    margin-left: 47%;
+}
+
+#text_h1 {
+    text-align: center;
+}
+
+#text_p {
+    text-align: center;
+    line-height: 25px;
+}
+
+input {
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 38.5%;
+    height: 36px;
+    border: 1px solid black;
+    padding-left: 10px;
+    margin-left: 31%;
+}
+
+button {
+    width: 39.55%;
+    height: 44px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 31%;
+    background-color: black;
+    color: white;
+    margin-top: 1%;
+}
