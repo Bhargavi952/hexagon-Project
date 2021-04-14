@@ -1,0 +1,13 @@
+#photos-main-div{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.2rem;
+}
+img{
+    width: 100%;
+}
+#photo-div{
+    margin-bottom: 1rem;
+}
