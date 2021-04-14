@@ -8,17 +8,19 @@
 .left-cont{
     background-color: blueviolet;
     height: 700px;
-   width:40%
-   
+   width:40%;
+  position: fixed;
+}
+.left-cont >img{
+    width: 100%
 }
 #right-cont{
-    background-color: rgb(170, 165, 166);
-  width:60%;
+     width:60%;
     height: 900px;
     display:grid;
-    grid-template-rows: 100px 40px 47px 15px 75px 75px 75px 75px 44px 20px;
-     grid-row-gap: 10px; 
-
+    grid-template-rows: 100px 120px 45px 20px 75px 75px 75px 75px 53px 20px;
+     grid-row-gap: 15px;
+     margin-left: 40%
     /* grid-template-columns: 70%; */
   
 }
@@ -28,36 +30,41 @@
     width: 70%;
     margin: 1px 30px; 
     margin-left:15%;
-    margin-top: 10px;
+   
    
 }
 .join-unsplash{
-    font-size: 45px;
+    font-size: 50px;
     margin: auto;
    margin-top: 80px;
 }
 .already-account{
     font-size: 17px;
     padding: 0px 30%;
-    margin-top: 30px
+    margin-top: 40px;
+   
 }
 .text-align{
-    text-align: center;       
+    text-align: center; 
+   
 }
 .color{
     color:white
 }
+
+
 #join-using-facebook{
     background-color: #1778f2;
     text-align: center;
     padding-top: 12px;
     font-size: 16px;
-    margin-top: 10px !important
+    font-style: normal;
+    
    
 }
 .or-text{
    font-size:12px;
-   margin-top: 50px
+   margin-top: 70px
 }
 #name{
     display:grid;
@@ -66,10 +73,7 @@
     grid-gap: 4%;
     
 }
-#name >div{
-        /* background-color: darkgreen; */
-    
-}
+
 .nameInpt{
     height: 52%;
     width: 96%;
@@ -78,7 +82,7 @@
     border: 1px solid red
 }
 .name-label{
-    font-size: 18px
+    font-size: 17px
 }
 .email-input{
     width: 99%;
@@ -87,8 +91,19 @@
     width: 100%;
     background-color: black;
     border-radius: 5px;
-    height: 100%
+    height: 100%;
+    color: white;
+    font-size: 15px;
 }
 .term-privacy-text{
     text-align: center;
+}
+.color-grey{
+    color: rgb(153, 149, 149)
+}
+#color-white-a{
+    color:white;
+}
+#login-color{
+    color: grey
 }
