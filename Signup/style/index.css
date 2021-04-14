@@ -6,7 +6,6 @@
  
 }
 .left-cont{
-    background-color: blueviolet;
     height: 700px;
    width:40%;
   position: fixed;
@@ -79,7 +78,7 @@
     width: 96%;
     border-radius: 5px;
     margin-top: 1%;
-    border: 1px solid red
+    border: 1px solid gray
 }
 .name-label{
     font-size: 17px
