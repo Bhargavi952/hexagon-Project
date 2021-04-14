@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header{
+     position: fixed;
+    margin-top: 10px;
+    width: 100%;
+}
+ /* .my_contain {
+   
+ 
+    height: 50px;
+
+    background-color: rgb(241, 233, 233);
+    color: rgb(107, 107, 107);
+    margin-bottom: 100px;
+
+} */
+
+/* ---------------------------------------- */
+nav {
+    background-color: white;
+    top: 0;
+    /* height: 70px; */
+    width: 100%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    overflow: hidden;
+    /* background-color:rgb(136, 116, 116); */
+    /* background-color: #fff; */
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    /* position:absolute; */
+}
+
+nav>a>li {
+    font-size: 17.5px;
+    color: black;
+    /* font-weight: bold; */
+    margin-left: 20px;
+    list-style-type: none;
+
+}
+
+nav>a {
+    text-decoration: none;
+
+}
+
+nav>a>img {
+    width: 70%;
+    margin-left: 10px;
+}
+
+nav>button {
+    height: 30px;
+    width: 150px;
+    margin-left: 25px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: white;
+
+}
+/* nav>div{
+
+} */
+nav>div>input {
+    width: 650px;
+    margin-left: 5px;
+    height: 35px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(243, 236, 236);
+    outline: none;
+
+   
+}
+.myicon{
+    background-color: rgb(243, 236, 236);
+     border-radius: 15px;
+     margin-left: 5px;
+}
+
+#hamberbur {
+    text-align: center;
+    font-size: 15px;
+    margin-left: 25px;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+#hamberbur:hover {
+    font-size: 20px;
+
+    font-weight: bolder;
+    color: black;
+}
+
+#profile {
+    width: 35px;
+    height: 35px;
+    margin-left: 25px;
+    border: 1px brown solid;
+    /* border: none; */
+    border-radius: 50%;
+}
+#profile>img{
+    width: 100%;
+    border-radius: 50%;
+}
+#new {
+    font-size: 8px;
+    color: rgb(238, 25, 68);
+}
+.fa-bell{
+     width: 35px;
+    height: 35px; 
+    margin-left: 25px;
+    border: 1px brown solid; 
+    /* border: none; */
+    /* border-radius: 50%; */
+}
+
+/* ----------------------------------------- */
+
+
+
+.myscroll {
+    /* flex-grow: 1; */
+    gap: 20px;
+    margin-left: 10px;
+    display: flex;
+    overflow: auto;
+    height: 100%;
+}
+
+.myscroll>div {
+    margin-left: 40px;
+
+}
+
+.myscroll>div>a {
+    /* margin-left: 40px; */
+    text-decoration: none;
+
+}
+
+
+.myscroll::-webkit-scrollbar {
+    height: 0px;
+    background-color: #F5F5F5;
+   
+}
+
+/* .myscroll::-webkit-scrollbar-thumb {
+    background-color: #000000;
+  
+} */
+
+
+
+.up,
+.down {
+    cursor: pointer;
+    position: absolute;
+    /* top: 50%; */
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(104, 101, 101);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.down {
+
+    right: 50px;
+    border-radius: 3px 0 0 3px;
+
+}
+
+.up {
+    left: 120px;
+    border-radius: 3px 0 0 3px;
+}
+
+.product:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+    font-size: 20px;
+    overflow: auto;
+    height: 100%;
+    cursor: pointer;
+}
+
+.youscroll {
+    margin-top: 30px;
+    height: fit-content;
+    /* display: flex; */
+    align-items: center
+}
+
+.align {
+    display: flex;
+    padding-top: 10px;
+
+    /* text-align: center; */
+
+}
+
+span {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: -5px;
+    margin-left: 5px;
+}
