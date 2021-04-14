@@ -1,0 +1,108 @@
+.main-cont{
+    width: 100%;
+   /* height: 1900px; */
+    margin: auto;
+    display: flex;
+ 
+}
+.left-cont{
+    height: 700px;
+   width:40%;
+  position: fixed;
+}
+.left-cont >img{
+    width: 100%
+}
+#right-cont{
+     width:60%;
+    height: 900px;
+    display:grid;
+    grid-template-rows: 100px 120px 45px 20px 75px 75px 75px 75px 53px 20px;
+     grid-row-gap: 15px;
+     margin-left: 40%
+    /* grid-template-columns: 70%; */
+  
+}
+
+#right-cont >div{
+    /* background-color: cornflowerblue; */
+    width: 70%;
+    margin: 1px 30px; 
+    margin-left:15%;
+   
+   
+}
+.join-unsplash{
+    font-size: 50px;
+    margin: auto;
+   margin-top: 80px;
+}
+.already-account{
+    font-size: 17px;
+    padding: 0px 30%;
+    margin-top: 40px;
+   
+}
+.text-align{
+    text-align: center; 
+   
+}
+.color{
+    color:white
+}
+
+
+#join-using-facebook{
+    background-color: #1778f2;
+    text-align: center;
+    padding-top: 12px;
+    font-size: 16px;
+    font-style: normal;
+    
+   
+}
+.or-text{
+   font-size:12px;
+   margin-top: 70px
+}
+#name{
+    display:grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+    
+}
+
+.nameInpt{
+    height: 52%;
+    width: 96%;
+    border-radius: 5px;
+    margin-top: 1%;
+    border: 1px solid gray
+}
+.name-label{
+    font-size: 17px
+}
+.email-input{
+    width: 99%;
+}
+.join-btn{
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    height: 100%;
+    color: white;
+    font-size: 15px;
+}
+.term-privacy-text{
+    text-align: center;
+}
+.color-grey{
+    color: rgb(153, 149, 149)
+}
+#color-white-a{
+    color:white;
+}
+#login-color{
+    color: grey
+}
