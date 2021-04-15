@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+
+<body>
+
+    <div class="main-cont">
+
+        <div class="left-cont">
+            <img src="https://images.unsplash.com/9/barcelona-traffic.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"></div>
+        <div id="right-cont"></div>
+    </div>
+
+    <script type="module">
+
+        import { signup } from "./My Modules/index.js"
+
+        var right_cont = document.getElementById("right-cont");
+
+        signup(right_cont)
+
+        var btn = document.getElementById("join-btn");
+
+        btn.addEventListener("click", join)
+
+
+        var users;
+        function join() {
+
+            var userName = document.getElementById("user-name").value;
+            var firstName = document.getElementById("first-name").value;
+            var lastName = document.getElementById("last-name").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+
+
+                function UserData(userName, firstName, lastName, password, email) {
+
+                    this.UserName = userName,
+                        this.firstName = firstName,
+                        this.lastName = lastName,
+                        this.Password = password,
+                        this.Email = email
+                }
+
+                var user = new UserData(userName, firstName, lastName, password, email)
+
+                users = JSON.parse(localStorage.getItem("users")) || [];
+
+                users.push(user)
+
+                localStorage.setItem("users", JSON.stringify(users))
+            }
+
+      
+    </script>
+
+
+</body>
+
+</html>
