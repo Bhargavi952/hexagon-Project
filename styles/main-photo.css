@@ -4,10 +4,11 @@
 }
 #main-photo{
     position: relative;
+    margin-top: 100px;
     /* border: 1px solid black; */
     margin-bottom: 40px;
 }
-#main-photo img{
+#main-photo  img{
     width: 100%;
     height: 35rem;
     position: relative;
