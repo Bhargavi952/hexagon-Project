@@ -1,0 +1,117 @@
+.big-modal{
+    width:100%;
+    height: 100%;
+    margin-top: 80px;
+   
+    /* background-color: rgba(0, 0, 0, 0.7); */
+     opacity: 1;
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+ 
+}
+.model-contain{
+    width: 600px;
+    height:700px;
+    border-radius: 10px;
+    
+    background-color: white;
+       position: relative;
+}
+.close{
+  position: absolute;
+  top:0;
+  color: rgb(102, 99, 99);
+ 
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor:pointer;
+}
+
+ #icon{
+     width:500px;
+     margin-top: 25px;
+     height: 100px;
+     border: white solid;
+     margin-left: 8%;
+ }
+ #icon>img{
+     margin-left: 15%;
+     margin-top: 2%;
+    
+ }
+ #icon>h1,p{
+     text-align: center;
+     color: rgb(32, 4, 4);
+ }
+ #page1{
+        width:500px;
+     height: 180px;
+     margin-top: 100px;
+     /* border-width: thin; */
+     /* border: rgb(51, 50, 50) solid; */
+     border: 1px solid;
+     border-radius: 15px;
+    margin-left: 45px 
+ }
+ #page2{
+     width:500px;
+  height: 220px;
+  border: 1px solid;
+  border-radius: 15px;
+  margin-top: 10px;
+  /* border: rgb(51, 50, 50) solid; */
+  margin-left: 45px 
+ }
+ #page1>a{
+     margin-top: 30px;
+     margin-left: 10px;
+     float: left;
+ }
+ #page2>a{
+     margin-top: 20px;
+     margin-left: 10px;
+     float: left;
+ }
+ #page1>div{
+     margin-top: 20px;
+     margin-left: 5px;
+     color: rgb(66, 66, 66);
+     width:250px;
+     height: 180px;
+     border: white solid;
+     float: left;
+ }
+ #page2>div{
+     margin-top: 20px;
+     width:280px;
+     color: rgb(66, 66, 66);
+     height: 180px;
+     text-align:left;
+     /* border: white solid; */
+     /* border-width: thin; */
+     float: left;
+ }
+ #last>div:nth-child(1)>h3{
+     width: 200px;
+     height: 30px;
+     border: white solid;
+     float: left;
+     text-align: left;
+      margin-top: 2px;
+     margin-left: 35px;
+    
+ 
+ }
+ h3{
+     color: rgb(66, 66, 66);
+ }
+ #last>div:nth-child(2)>h3{
+     text-align: right;
+   
+   
+}
+
