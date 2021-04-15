@@ -52,13 +52,13 @@ function signup(cont) {
     </div>
 
     <div class="margin">
- <button class="join-btn" onclick="join()" id="join-btn">Join</button>
+ <button class="join-btn" id="join-btn">Join</button>
     </div>
 
     <div class="term-privacy-text" class="margin">
     <a>By joining, you agree to the Terms and Privacy Policy.</a>
     </div>
     `
-// return signupBox;
+ //return signupBox;
 }
 
