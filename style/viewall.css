@@ -21,11 +21,11 @@
     border-radius: 5px;
 }
 
-/* .item>div {
+.item>div {
     display: flex;
 
     gap: 50px;
-} */
+}
 
 .item>div>img {
     width: 15%;

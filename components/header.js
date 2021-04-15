@@ -4,7 +4,7 @@ function header(){
     head.innerHTML = `
     <nav>
     <a href="" target="_blank" rel="noopener noreferrer">
-        <img src="/image/unslashicon1.png"
+        <img src="image/unslashicon1.png"
             alt="ola-logo">
     </a>
 
@@ -33,7 +33,7 @@ function header(){
     <!-- <li>Help</li> -->
     <div id="profile">
         <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
-        <img src="/image/profileimage.jpg"/>
+        <img src="image/profileimage.jpg"/>
     </div>
     </div>
 </nav>
@@ -43,9 +43,10 @@ function header(){
     <div class="container youscroll">
 
         <div class="align">
-            <p>Editorial</p> <span>|</span>
-            <!-- <h1>|</h1> -->
-            <a style="margin-left: 5px; text-decoration: none;" href="#">Folowing</a>
+            <p>Editorial</p> 
+          
+            
+            <a style="margin-left: 5px; text-decoration: none;" href="#">Following</a>
             <p class="arrow up">&#10094;</p>
 
             <div style="margin-right: 25px;" class="myscroll">
