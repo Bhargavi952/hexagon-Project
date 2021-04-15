@@ -1,0 +1,151 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 420px 420px 420px;
+    grid-template-rows: 350px 350px 350px 350px 350px 350px 350px 350px 350px;
+    grid-gap: 20px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.item {
+    background-color: white;
+    border-radius: 5px;
+    /* border: yellow; */
+
+}
+.item:hover{
+    transform:scale(1.02);
+    background-color: whitesmoke;
+}
+.item>img {
+    position: relative;
+  
+    width: 100%;
+    height: 40%;
+    border-radius: 5px;
+}
+
+.item>div {
+    display: flex;
+
+    gap: 50px;
+}
+
+.item>div>img {
+    width: 15%;
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+
+h4 {
+    /* margin-top: -15px; */
+    margin-left: -140px;
+    margin-top: 45px;
+    color: rgb(107, 104, 104);
+}
+
+h3 {
+    margin-left: -30px;
+
+}
+
+p {
+    text-align: justify;
+    margin-left: 50px;
+
+}
+#mainhead{
+    margin-top: 110px;
+    font-size: 50px;
+    margin-left: 25px;
+}
+#mainheadsub{
+    margin-top: 20px;
+}
+#subhead{
+    font-size: 25px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+#mybutton{
+    position: absolute;
+    margin-left: -380px;
+    margin-top: 5px;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    padding: auto;
+    background-color: rgb(179, 216, 179);
+    border: none;
+}
+.fa-circle{
+    color: green;
+    font-size: 10px;
+    margin-left: -8px;
+}
+/* -------------footer--------------------------- */
+#footpara {
+margin-top: 10px;
+background-color:white;
+}
+footer {
+display: flex;
+/* justify-content: center; */
+margin-bottom: 22px;
+}
+#footer > div {
+width: 22%;
+}
+#footer > div > a,
+#footer > div > p {
+color: white;
+text-decoration: none;
+}
+#footer > div > p {
+font-weight: bold;
+margin-bottom: 15px;
+}
+#footer > div > a > li {
+list-style-type: none;
+font-size: 18px;
+margin-top: 10px;
+color: black;
+/* font-weight: bold; */
+}
+#footpara > p {
+color: white;
+text-align: center;
+margin-bottom: 0%;
+margin-top: 0%;
+font-size: 12px;
+font-weight: bold;
+}
+
+#myfooter{
+float: left;
+} 
+ #myfooter>a{
+float: left;
+}
+#myfooter>h3{
+float: left;
+margin-left: 20px;
+}
+#myfooter>p{
+float: left;
+
+}
+#socialicon{
+  display: flex;
+  margin-left: 250px;
+  margin-top: 40px;
+ 
+}
+#socialicon>li{
+    list-style: none;
+}
+#socialicon>li>a{
+    color: rgb(180, 170, 170);
+}
