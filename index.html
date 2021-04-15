@@ -7,6 +7,8 @@ main
     <title>Index</title>
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/pop.css">
+    <link rel="stylesheet" href="./styles/content.css">
+    <link rel="stylesheet" href="./styles/main-photo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -16,37 +18,19 @@ main
         import { header,myshow } from "./components/header.js"
         // import {} from "./components/header.js"
         import {pop,funcPOP} from  "./components/pop.js"
-
+        import mainPhoto from "./components-m/main-photo.js"
+    import content from "./components-m/content.js"
 
 
         document.body.appendChild(header());
         document.body.append(myshow());
         document.body.appendChild(pop());
         document.body.append(funcPOP());
+        document.body.append(mainPhoto(),content());
 
 
     </script>
 </body>
 
 </html>
-=======
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/content.css">
-    <link rel="stylesheet" href="./styles/main-photo.css">
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-</head>
-<body>
-    
-</body>
-</html>
-<script type="module">
-    import mainPhoto from "./components-m/main-photo.js"
-    import content from "./components-m/content.js"
-    
 
-    document.body.append(mainPhoto(),content())
-</script>
- main
