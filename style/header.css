@@ -6,12 +6,13 @@ header{
      position:fixed;
     top: 0;
     width: 100%;
+    background-color: white;
     
 }
 
 /* ---------------------------------------- */
 nav {
-    background-color: white;
+   
   
     top: 0;
     /* height: 70px; */
@@ -59,7 +60,7 @@ nav>button {
 
 } */
 nav>div>input {
-    width: 650px;
+    width: 660px;
     margin-left: 5px;
     height: 35px;
     border-radius: 15px;
@@ -83,6 +84,7 @@ nav>div>input {
     background-color: white;
     border: none;
     border-radius: 5px;
+    width: 100px;
     outline: none;
 }
 
@@ -129,6 +131,7 @@ nav>div>input {
     display: flex;
     overflow: auto;
     height: 100%;
+    background-color: white;
 }
 
 .myscroll>div {
@@ -181,7 +184,7 @@ nav>div>input {
 }
 
 .up {
-    left: 120px;
+    left: 122px;
     border-radius: 3px 0 0 3px;
 }
 

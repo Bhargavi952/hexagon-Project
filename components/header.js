@@ -2,6 +2,8 @@ function header(){
     let head = document.createElement('div')
 
     head.innerHTML = `
+ 
+    <header class="my_contain">
     <nav>
     <a href="" target="_blank" rel="noopener noreferrer">
         <img src="image/unslashicon1.png"
@@ -28,17 +30,15 @@ function header(){
 
     <button id="submit">Submit a photo</button>
     <div id="alert1">
-        <i class="far fa-bell"></i>
+   <a href=""><i class="fas fa-bell"></i></a>
    </div>
-    <!-- <li>Help</li> -->
+
     <div id="profile">
         <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
         <img src="image/profileimage.jpg"/>
     </div>
     </div>
 </nav>
-    <header class="my_contain">
-   
 
     <div class="container youscroll">
 
@@ -46,7 +46,7 @@ function header(){
             <p>Editorial</p> 
           
             
-            <a style="margin-left: 5px; text-decoration: none;" href="#">Following</a>
+            <a style="margin-left: 15px; text-decoration: none; color:black" href="#">Following</a>
             <p class="arrow up">&#10094;</p>
 
             <div style="margin-right: 25px;" class="myscroll">
@@ -78,7 +78,7 @@ function header(){
 
             </div>
             <p class="arrow down">&#10095;</p>
-            <a style="margin-right: 10px; text-decoration: none;" href="viewall.html">ViewAll</a>
+            <a style="margin-right: 10px; text-decoration: none; color:black" href="viewall.html">ViewAll</a>
         </div>
     </div>
 </header>
@@ -92,6 +92,7 @@ function header(){
 export  {header,myshow}
 
 function myshow(){
+   
     let scroll1 = document.querySelector(".myscroll")
 
 
@@ -122,7 +123,7 @@ function myshow(){
             document.querySelector(".up").style.display = "block"
         }
 
-        if (event.srcElement.scrollLeft > 1600) {
+        if (event.srcElement.scrollLeft > 1261) {
             document.querySelector(".up").style.display = "block"
             document.querySelector(".down").style.display = "none"
         } else {

@@ -4,15 +4,19 @@
     grid-template-rows: 350px 350px 350px 350px 350px 350px 350px 350px 350px;
     grid-gap: 20px;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .item {
     background-color: white;
     border-radius: 5px;
-    border: yellow;
+    /* border: yellow; */
 
 }
-
+.item:hover{
+    transform:scale(1.02);
+    background-color: whitesmoke;
+}
 .item>img {
     position: relative;
   
@@ -53,12 +57,16 @@ p {
 
 }
 #mainhead{
-    margin-top: 150px;
+    margin-top: 110px;
     font-size: 50px;
     margin-left: 25px;
 }
+#mainheadsub{
+    margin-top: 20px;
+}
 #subhead{
     font-size: 25px;
+    margin-top: 25px;
     margin-left: 25px;
 }
 #mybutton{
@@ -69,8 +77,14 @@ p {
     height: 25px;
     border-radius: 5px;
     padding: auto;
+    background-color: rgb(179, 216, 179);
+    border: none;
 }
-
+.fa-circle{
+    color: green;
+    font-size: 10px;
+    margin-left: -8px;
+}
 /* -------------footer--------------------------- */
 #footpara {
 margin-top: 10px;
@@ -122,4 +136,16 @@ margin-left: 20px;
 #myfooter>p{
 float: left;
 
+}
+#socialicon{
+  display: flex;
+  margin-left: 250px;
+  margin-top: 40px;
+ 
+}
+#socialicon>li{
+    list-style: none;
+}
+#socialicon>li>a{
+    color: rgb(180, 170, 170);
 }
