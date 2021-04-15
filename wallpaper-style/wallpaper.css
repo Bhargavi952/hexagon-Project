@@ -49,6 +49,7 @@ height: 100%;
 background-color: black;
 color: white;
 border-radius: 5px;
+font-size: 15px
 
 }
 #left-cont{
@@ -61,7 +62,8 @@ border-radius: 5px;
 }
 #btn-box{
     width: 87%;
-    margin-left: 13%    
+    margin-left: 13%;
+       
 }
 
 #open{
@@ -84,4 +86,36 @@ border-radius: 5px;
     font-size: 7px;
     margin-right: 5px;
     color: rgb(18, 95, 50)
+}
+#submit-btn-box{
+     width: 34.7%;
+     height: 17%;
+     float: right;
+     margin-top: 1%;
+     margin-left:0%;
+     margin-left: 80%;
+     display:none;
+     
+}
+#submit-btn{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 5px;
+    text-align: left;
+    padding: 4%;
+    font-size: 14px
+}
+.color-white{
+    color: white !important 
+}
+.bold{
+    font-weight: bold;
+}
+#upload{
+margin-left: 2%
+}
+#plus-icon{
+    color: white;
+    font-size: 15px
 }

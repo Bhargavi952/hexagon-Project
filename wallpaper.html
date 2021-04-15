@@ -14,20 +14,26 @@
 
     <div id="header-cont"></div>
     <div id="wallpapers-cont">
-       
+
     </div>
     <div id="photos-cont"></div>
     <script type="module">
 
         import { header } from "./components/header.js"
-        import {wallpaper} from "./wallpaper-modules/wallpaper.js"
+        import { wallpaper } from "./wallpaper-modules/wallpaper.js"
 
         var header_cont = document.getElementById("header-cont");
-        var wallpapers_cont = document.getElementById("wallpapers-cont") 
+        var wallpapers_cont = document.getElementById("wallpapers-cont")
 
         header_cont.appendChild(header())
+        wallpaper(wallpapers_cont)
 
-       wallpaper(wallpapers_cont)
+        document.getElementById("btn").addEventListener("click", function showMe() {
+            document.getElementById("submit-btn-box").style.display = "block";
+
+        })
+
+        
     </script>
 </body>
 
