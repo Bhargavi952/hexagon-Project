@@ -14,7 +14,9 @@
     <div class="main-cont">
 
         <div class="left-cont">
-            <img src="https://images.unsplash.com/9/barcelona-traffic.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"></div>
+            <img
+                src="https://images.unsplash.com/9/barcelona-traffic.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max">
+        </div>
         <div id="right-cont"></div>
     </div>
 
@@ -28,7 +30,7 @@
 
         var btn = document.getElementById("join-btn");
 
-        btn.addEventListener("click",function(){
+        btn.addEventListener("click", function () {
 
             join()
         })
@@ -44,25 +46,41 @@
             var email = document.getElementById("email").value;
 
 
-                function UserData(userName, firstName, lastName, password, email) {
 
-                    this.UserName = userName,
-                        this.firstName = firstName,
-                        this.lastName = lastName,
-                        this.Password = password,
-                        this.Email = email
-                }
+            if (password.length < 6) {
 
-                var user = new UserData(userName, firstName, lastName, password, email)
-
-                users = JSON.parse(localStorage.getItem("users")) || [];
-
-                users.push(user)
-
-                localStorage.setItem("users", JSON.stringify(users))
+                var password_inpt = document.getElementById("password");
+                password_inpt.style.border = "1px solid red"
             }
 
-      
+         
+                else if (password.length > 6) {
+
+                    function UserData(userName, firstName, lastName, password, email) {
+
+                        this.UserName = userName,
+                            this.firstName = firstName,
+                            this.lastName = lastName,
+                            this.Password = password,
+                            this.Email = email
+                    }
+
+                    var user = new UserData(userName, firstName, lastName, password, email)
+
+                    users = JSON.parse(localStorage.getItem("users")) || [];
+
+                    users.push(user)
+
+                    localStorage.setItem("users", JSON.stringify(users))
+              
+                    var password_inpt = document.getElementById("password");
+                password_inpt.style.border = "1px solid gray";
+
+                window.location.href = "login.html"
+            }
+        }
+
+
     </script>
 
 
