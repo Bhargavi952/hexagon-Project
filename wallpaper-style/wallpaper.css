@@ -119,3 +119,31 @@ margin-left: 2%
     color: white;
     font-size: 15px
 }
+ #pop-up-box{
+    width: 90%;
+    height: 450px;
+    background-color: rgb(250, 245, 245);
+    position:fixed;
+    visibility: hidden;
+    padding: 2% 3%
+ 
+} 
+#pop-up-box.active{
+    visibility: visible;
+}
+.content-box{
+    width: 100%;
+    height: 270px;
+    border: 1px dashed black;
+}
+.footer{
+    width: 100%;
+    border: 1px solid red;
+    height: 70px;
+    margin-top: 20px
+}
+/* #upload-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+} */
