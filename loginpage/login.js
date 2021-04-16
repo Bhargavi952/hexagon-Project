@@ -4,7 +4,8 @@ function login() {
     var password = document.getElementById("password").value
     login_data.forEach(element => {
         if (element.Email == email && element.Password == password) {
-            window.location.href = "#" //home page  
+            window.location.href = "../profilepage/profile.html" //home page 
+        localStorage.setItem('User',JSON.stringify(element))
         }
         else {
             var alertmsg = document.getElementById("alertmsg")
@@ -13,7 +14,8 @@ function login() {
         }
 
     });
-    localStorage.setItem('User',JSON.stringify(login_data))
+    
+    
 }
 document.getElementById('closeButton').addEventListener('click', function (e) {
     e.preventDefault();
