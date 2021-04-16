@@ -22,8 +22,8 @@
 
     <script type="module">
 
-        import { signup } from "./My Modules/index.js"
-
+        import { signup } from "./components/index.js"
+       
         var right_cont = document.getElementById("right-cont");
 
         signup(right_cont)
@@ -34,9 +34,9 @@
 
             join()
         })
-
-
         var users;
+        users = JSON.parse(localStorage.getItem("users")) || [];
+      
         function join() {
 
             var userName = document.getElementById("user-name").value;
@@ -67,7 +67,7 @@
 
                     var user = new UserData(userName, firstName, lastName, password, email)
 
-                    users = JSON.parse(localStorage.getItem("users")) || [];
+                  
 
                     users.push(user)
 
