@@ -1,0 +1,54 @@
+#photos-main-div{
+    height: 100%;
+    width: 90%;
+    margin: auto;
+   
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1.2rem;
+    
+}
+img{
+    width: 100%;
+}
+#photo-div{
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: -10;
+}
+#photo-download-btn{
+    position: absolute;
+    
+    left: 22rem;
+    bottom: 2rem;
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+   
+}
+
+#photo-collection-btn{
+    position: absolute;
+    
+    left: 22rem;
+    
+    top: 1rem;
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+   
+}
+
+#photo-like-btn{
+    position: absolute;
+    
+    left: 19rem;
+    
+    top: 1rem;
+    width: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+   
+}
