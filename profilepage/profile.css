@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+}
+#heading{
+    display: flex;
+}
+#user_section{
+    padding-left: 25%;
+    /* border: 1px solid black; */
+    margin-bottom: 50px;
+    display: flex;
+}
+#user_section > div{
+    margin: 30px;
+}
+.avatar-large {
+
+    margin-top: 50px;
+    width: 110%;
+    border-radius: 100px;
+  }
+#profile_nav{
+    width: 100%;
+    height: 40px;
+    /* border: black 1px solid; */
+    position: sticky; 
+     top:  0px;
+}
+#nav_div {
+    /* width: 100%;
+    height: 90px; */
+    display: flex;
+    margin-left: 20px;
+
+}
+#nav_div > div{
+    width: 100px;
+}
+
+#btn1{
+    border: 1px solid gray;
+    background-color: white;
+    color: gray;
+    margin-left:3px;
+}
+#btn1:hover{
+    /* border: 1px solid black; */
+    color: black;
+}
+button{
+    border: none;
+    outline: none;
+    background-color: white;
+    color: gray;
+
+}
+button:hover{
+    color: black;
+    font-weight: 900;
+}
+a_div1:hover{
+    color: black;
+}
