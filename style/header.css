@@ -121,6 +121,23 @@ nav>div>input {
  
 }
 
+#log{
+    margin-left: 5px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+#joinfree{
+    margin-left: 12px;
+    padding: 5px;
+    background-color: #3cb46e;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
 /* ----------------------------------------- */
 
 

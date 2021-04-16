@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+main
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/pop.css">
+ 
+    <link rel="stylesheet" href="./style/content.css">
+    <link rel="stylesheet" href="./style/main-photo.css">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+
+<body>
+
+    <script type="module">
+        import { header1,myshow1} from "./components/header1.js"
+        import {profile} from './components/profile.js'
+        import {pop,funcPOP} from  "./components/pop.js"
+        import mainPhoto from "./components/main-photo.js"
+        import content from "./components/content.js"
+    // import {Notification} from './components/notification.js'
+
+
+        document.body.append(header1());
+        document.body.append(myshow1());
+        document.body.append(pop());
+        document.body.append(funcPOP());
+        document.body.append(mainPhoto());
+        document.body.append(content());
+     
+      
+
+    </script>
+
+</body>
+
+</html>
+
