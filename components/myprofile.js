@@ -1,17 +1,19 @@
-var array = [{name1:"Bhargavi"}]
+
+
+
 var like_data = JSON.parse( localStorage.getItem(''))
 var collection_data = JSON.parse( localStorage.getItem(''))
 
-var userdata = JSON.parse(localStorage.getItem('users')) || []
+var userdata = JSON.parse(localStorage.getItem('User')) || []
 console.log(userdata)
 
 var div1 = document.getElementById("user")
 var h1 = document.createElement("h1")
-h1.innerHTML = `<h1 style="margin-bottom:0px">${array[0].name1}</h1><a href="https://unsplash.com/account"><button id="btn1">Edit profile</button></a>`
+h1.innerHTML = `<h1 style="margin-bottom:0px">${userdata.firstName}${userdata.lastName}</h1><a href="https://unsplash.com/account"><button id="btn1">Edit profile</button></a>`
 div1.appendChild(h1)
 var div2 = document.getElementById('username')
 var p = document.createElement('p')
-p.innerHTML = `<p>Download free, beautiful high-quality photos curated by ${array[0].name1}</p>
+p.innerHTML = `<p>Download free, beautiful high-quality photos curated by ${userdata.firstName}</p>
     <p style="color:gray;"> Not available for hire <a id="a_div1" style="color:gray;  text-decoration: underline; href="https://unsplash.com/account/hiring"> Update availability </a></p>`
 div2.appendChild(p)
 var nav = document.getElementById('profile_nav')
