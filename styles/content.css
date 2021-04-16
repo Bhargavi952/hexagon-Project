@@ -12,15 +12,15 @@ img{
 }
 #photo-div{
     margin-bottom: 1rem;
-    position: relative;
+    /* position: relative; */
 }
 #photo-btn{
-    position: absolute;
+    /* position: absolute; */
     left: 23rem;
     top: 0;
 }
 #photo-btn1{
-    position: absolute;
+    /* position: absolute; */
     left: 18rem;
     top: 0;
 }

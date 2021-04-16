@@ -9,27 +9,30 @@ main
     <link rel="stylesheet" href="./style/pop.css">
     <link rel="stylesheet" href="./styles/content.css">
     <link rel="stylesheet" href="./styles/main-photo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
 <body>
 
     <script type="module">
-        import { header,myshow } from "./components/header.js"
-        // import {} from "./components/header.js"
+        import { header,myshow} from "./components/header.js"
+        import {profile} from './components/profile.js'
         import {pop,funcPOP} from  "./components/pop.js"
         import mainPhoto from "./components-m/main-photo.js"
     import content from "./components-m/content.js"
 
 
-        document.body.appendChild(header());
+        document.body.append(header());
         document.body.append(myshow());
-        document.body.appendChild(pop());
+        document.body.append(pop());
         document.body.append(funcPOP());
+      
         document.body.append(mainPhoto(),content());
-
+        document.body.append(profile());
 
     </script>
+  <script src="./components/menutoggle.js"></script>
 </body>
 
 </html>

@@ -4,9 +4,11 @@
 }
 header{
      position:fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
+   padding: 10px;
     background-color: white;
+    /* position: sticky; */
     
 }
 
@@ -15,15 +17,15 @@ nav {
    
   
     top: 0;
-    /* height: 70px; */
+   
     width: 100%;
     display: flex;
-    /* justify-content: space-evenly; */
+  
     align-items: center;
     overflow: hidden;
-
+  
     position: fixed;
-    top: 0px;
+   
     width: 100%;
   
 }
@@ -112,12 +114,11 @@ nav>div>input {
     color: rgb(238, 25, 68);
 }
 .fa-bell{
-     width: 35px;
-    height: 35px; 
-    margin-left: 25px;
-    border: 1px brown solid; 
-    /* border: none; */
-    /* border-radius: 50%; */
+  
+    margin-left: 30px;
+ font-size: 22px;
+ opacity: .7;
+ 
 }
 
 /* ----------------------------------------- */
@@ -158,7 +159,10 @@ nav>div>input {
   
 } */
 
-
+/* #alert{
+    width: 25px;
+    height: 15px;
+} */
 
 .up,
 .down {
@@ -178,13 +182,13 @@ nav>div>input {
 
 .down {
 
-    right: 50px;
+    right: 75px;
     border-radius: 3px 0 0 3px;
 
 }
 
 .up {
-    left: 122px;
+    left: 135px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -223,3 +227,85 @@ nav>div>input {
     margin-top: -5px;
     margin-left: 5px;
 } */
+
+/* --------------------------------- */
+
+.action{
+    position: fixed;
+    top: 5px;
+    right: 30px;
+
+}
+.action .profile{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.action .profile img{
+    position: absolute;
+    /* top:0;
+    left: 0; */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    opacity: .5;
+}
+.action .menu{
+    position:absolute;
+    top: 70px;
+    right: -10px;
+  
+    padding: 10px 20px;
+    background: black;
+    width: 120px;
+    box-sizing: 0 5px 25px rgba(0,0,0.0.1);
+    /* border-radius:15px ; */
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+
+}
+.action .menu.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.action .menu::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 28px;
+    width: 20px;
+       height: 20px;
+       background: black;
+       transform: rotate(45deg);
+    }
+.action .menu ul li {
+ list-style: none;
+ padding: 10px 0;
+ border-top: 1px solid rgba(0,0,0.0.05);
+ display: flex;
+ /* align-items: center; */
+ /* justify-content: center; */
+
+}
+.action .menu ul li img{
+ max-width: 20px;
+
+ opacity: 0.5;
+
+}
+.action .menu ul li a{
+ display: inline-block;
+ text-decoration: none;
+ color: white;
+
+}
+.action .menu ul li:hover a{
+ color: grey;
+}
