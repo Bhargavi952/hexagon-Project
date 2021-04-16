@@ -13,6 +13,7 @@ function login() {
         }
 
     });
+    localStorage.setItem('User',JSON.stringify(login_data))
 }
 document.getElementById('closeButton').addEventListener('click', function (e) {
     e.preventDefault();
