@@ -12,7 +12,7 @@ function profile(){
           <li><a href="profile.html">View profile</a></li>
           <li><a href="">Stats</a></li>
           <li><a href="">Account setting</a></li>
-          <li><a href="">Logout</a></li>
+          <li><a href="outerindex.html">Logout</a></li>
         </ul>
     </div>
 
