@@ -17,8 +17,8 @@
 
     <div id="wallpapers-cont">
     </div>
-    
-  
+
+
     <div id="photos-cont"></div>
 
     <script type="module">
@@ -43,37 +43,63 @@
             pop_up_box.classList.toggle('active')
         })
 
-        document.getElementById("close-btn").addEventListener("click",function popupToggle() {
+        document.getElementById("close-btn").addEventListener("click", function popupToggle() {
 
-            
+
             var pop_up_box = document.getElementById("pop-up-box");
             pop_up_box.classList.toggle('active')
         })
 
-        
-       var files = document.getElementById("my-files");
-      
 
-        
-       // var img = document.getElementById("img");
 
-       files.onchange =   function showPreviewOne(event){
-     
-        var obj = files.files
-    console.log(obj[0])
-        let src = URL.createObjectURL(obj[0].name);
-        let preview = document.getElementById("img");
-        preview.src = src;
-        preview.style.display = "block";
+        function main() {
+            // var inputFileToLoad = document.createElement("input");
+            // inputFileToLoad.type = "file";
+            // inputFileToLoad.id = "inputFileToLoad";
+            // document.body.appendChild(inputFileToLoad);
 
-        // var reader = new FileReader();
+            var upload_file_plus_btn = document.getElementById("upload-file-plus-btn");
+            upload_file_plus_btn.onclick = grabUrl;
+            upload_file_plus_btn.value = "upload image";
+            // document.body.appendChild(buttonLoadFile);
+        }
 
-        // reader.readAsDataURL(obj[0].name);
+        function grabUrl() {
+            var myImg = document.getElementById("my-files").files;
+            console.log(myImg)
+            if (myImg.length > 0) {
 
-       //img.setAttribute("src",obj[0].name)
-        //img.src = URL.createObjectURL(obj[0].name);
+                var img_to_upload = myImg[0];
+
+                if (img_to_upload.type.match("image.*")) {
+                    var fileReader = new FileReader();
+                    fileReader.onload = function (e) {
+                        var upload_img = document.createElement("img");
+                        upload_img.src = e.target.result;
+                        upload_img.setAttribute("id", "my-img")
+                        document.getElementById("img-box").append(upload_img)
+                        // document.body.appendChild(upload_img);
+                    };
+                    fileReader.readAsDataURL(img_to_upload);
+                }
+            }
+        }
+
+        main();
+    //    var files = document.getElementById("my-files").files;
+    //    files.onchange = function() {
+
+    //     var obj = files.files
+    // console.log(obj[0])
+    //     var img = document.getElementById("my-img");
+    //     // var reader = new FileReader();
+
+    //     // reader.readAsDataURL(obj[0].name);
+
+    //     img.setAttribute("src",obj[0].name)
+
          //localStorage.setItem("url",JSON.stringify(files.files))
-       }
+
     </script>
 </body>
 
