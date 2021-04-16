@@ -5,6 +5,18 @@ export {wallpaper}
         function wallpaper(cont) {
 
             cont.innerHTML = `
+
+            <div id="pop-up-box">
+            <button id="close-btn">close</button>
+            <a>Submit to <a>Wallpapers</a></a>
+            <div class="content-box">
+            <input type="file" multiple id="my-files"   accept="image/gif, image/jpeg, image/png" style="display"/>
+            <img id="img"/>
+            // <input type="button" id="upload-file-plus-btn"/>
+            </div>
+            <div class="footer"></div>
+            
+        </div>
             <div id="left-cont">
 
             <div id="left-status-box">
@@ -39,15 +51,19 @@ export {wallpaper}
             <div id="btn-box"><button id="btn">Submit to <a class="bold">Wallpapers</a></button></div>
             </div>
            
-           <div id="submit-btn-box" class="color-white"><button id="submit-btn"> 
+           <div id="submit-btn-box" class="color-white"><button id="submit-btn">
+
            <a class="icon" id="plus-icon" href="#"><i class="fas fa-plus"></i></a>
+
            <a href="#" class="color-white" id="upload">Upload a new photo</a>
+           
            </button></div>
           
             <h1 id="wallpaper-heading">Wallpapers</h1><br/>
             <p><a id="epic-drone-text">From epic drone shots to inspiring moments in nature, find free HD<br/> wallpapers worthy of your mobile and desktop screens. Finally.</a></p>
             `
         }
-      
+
+       
 
        

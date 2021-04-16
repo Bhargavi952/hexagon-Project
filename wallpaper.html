@@ -11,12 +11,16 @@
 </head>
 
 <body>
+    <!-- <div id="pop-up-box"></div> -->
 
     <div id="header-cont"></div>
-    <div id="wallpapers-cont">
 
+    <div id="wallpapers-cont">
     </div>
+    
+  
     <div id="photos-cont"></div>
+
     <script type="module">
 
         import { header } from "./components/header.js"
@@ -33,7 +37,43 @@
 
         })
 
+        document.getElementById("submit-btn").addEventListener("click", function popupToggle() {
+
+            var pop_up_box = document.getElementById("pop-up-box");
+            pop_up_box.classList.toggle('active')
+        })
+
+        document.getElementById("close-btn").addEventListener("click",function popupToggle() {
+
+            
+            var pop_up_box = document.getElementById("pop-up-box");
+            pop_up_box.classList.toggle('active')
+        })
+
         
+       var files = document.getElementById("my-files");
+      
+
+        
+       // var img = document.getElementById("img");
+
+       files.onchange =   function showPreviewOne(event){
+     
+        var obj = files.files
+    console.log(obj[0])
+        let src = URL.createObjectURL(obj[0].name);
+        let preview = document.getElementById("img");
+        preview.src = src;
+        preview.style.display = "block";
+
+        // var reader = new FileReader();
+
+        // reader.readAsDataURL(obj[0].name);
+
+       //img.setAttribute("src",obj[0].name)
+        //img.src = URL.createObjectURL(obj[0].name);
+         //localStorage.setItem("url",JSON.stringify(files.files))
+       }
     </script>
 </body>
 
