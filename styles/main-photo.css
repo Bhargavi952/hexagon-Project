@@ -3,7 +3,7 @@
     margin: 0px;
 }
 #main-photo{
-    position: relative;
+    /* position: relative; */
     margin-top: 100px;
     /* border: 1px solid black; */
     margin-bottom: 40px;
@@ -11,10 +11,11 @@
 #main-photo  img{
     width: 100%;
     height: 35rem;
-    position: relative;
+    /* position: relative; */
 }
 #main-photo-content{
-    position: absolute;
+    /* position: absolute; */
+ 
     top:8rem;
     left: 20rem;
 }

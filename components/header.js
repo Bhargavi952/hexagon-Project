@@ -7,14 +7,14 @@ function header(){
     <nav>
     <a href="" target="_blank" rel="noopener noreferrer">
         <img src="image/unslashicon1.png"
-            alt="ola-logo">
+            alt="unsplash-logo">
     </a>
 
 
    
-   <div class="myicon">
+   <div class="myicon" >
     <i class="fa fa-search" aria-hidden="true"></i>
-    <input type="text" placeholder="Search free high-resolution photos">
+    <input   type="text" class="myinput" placeholder="Search free high-resolution photos">
      </div> 
    
 
@@ -29,14 +29,11 @@ function header(){
     <button id="hamberbur">. . .</button>
 
     <button id="submit">Submit a photo</button>
-    <div id="alert1">
-   <a href=""><i class="fas fa-bell"></i></a>
-   </div>
-
-    <div id="profile">
-        <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
-        <img src="image/profileimage.jpg"/>
-    </div>
+   
+    <a><i class="fas fa-bell"></i></a>
+   
+  
+   
     </div>
 </nav>
 
@@ -78,7 +75,7 @@ function header(){
 
             </div>
             <p class="arrow down">&#10095;</p>
-            <a style="margin-right: 10px; text-decoration: none; color:black" href="viewall.html">ViewAll</a>
+            <a style="margin-right: 18px; text-decoration: none; color:black" href="viewall.html">ViewAll</a>
         </div>
     </div>
 </header>
@@ -90,6 +87,8 @@ function header(){
 }
 
 export  {header,myshow}
+
+
 
 function myshow(){
    
@@ -132,4 +131,11 @@ function myshow(){
         console.log(event.srcElement.scrollLeft);
 
     };
+
+
+
+ 
 }
+
+
+   

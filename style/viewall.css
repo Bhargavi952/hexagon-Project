@@ -137,15 +137,12 @@ margin-left: 20px;
 float: left;
 
 }
-#socialicon{
-  display: flex;
-  margin-left: 250px;
-  margin-top: 40px;
- 
-}
+
+
 #socialicon>li{
     list-style: none;
 }
-#socialicon>li>a{
-    color: rgb(180, 170, 170);
+
+#socialicon>li>a>img{
+    width: 10%;
 }

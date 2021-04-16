@@ -13,7 +13,7 @@ function content(){
     })
 
     function getData(){
-        fetch("https://api.unsplash.com/photos?per_page=15&client_id=UpbcrkfvAmWnk62lXxPIQgP4yeg8ws7UV4UV14XSzbU")
+        fetch("https://api.unsplash.com/photos?per_page=150&client_id=UpbcrkfvAmWnk62lXxPIQgP4yeg8ws7UV4UV14XSzbU")
         .then(res => res.json())
         .then(res => {
             for(let i = 0; i < res.length; i++){
