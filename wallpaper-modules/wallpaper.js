@@ -7,12 +7,16 @@ export {wallpaper}
             cont.innerHTML = `
 
             <div id="pop-up-box">
+
             <button id="close-btn">close</button>
+
             <a>Submit to <a>Wallpapers</a></a>
-            <div class="content-box">
-            <input type="file" multiple id="my-files"   accept="image/gif, image/jpeg, image/png" style="display"/>
-            <img id="img"/>
-            // <input type="button" id="upload-file-plus-btn"/>
+
+            <div class="content-box" id="img-box">
+          
+            <input type="file" multiple id="my-files" accept="image/gif, image/jpeg, image/png" style="display"/>
+           
+             <input type="button" id="upload-file-plus-btn"/>
             </div>
             <div class="footer"></div>
             
