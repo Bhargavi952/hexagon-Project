@@ -9,7 +9,7 @@ function profile(){
     </div>
     <div class="menu">
           <ul>
-          <li><a href="">View profile</a></li>
+          <li><a href="profile.html">View profile</a></li>
           <li><a href="">Stats</a></li>
           <li><a href="">Account setting</a></li>
           <li><a href="">Logout</a></li>

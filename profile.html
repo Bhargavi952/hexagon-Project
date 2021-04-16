@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="./style/profile.css">
+    <link rel="stylesheet" href="./style/header.css">
 </head>
 <body>
-    
+    <script type="module">
+import { header,myshow} from "./components/header.js"
+import {profile} from './components/profile.js'
+       document.body.append(header());
+        document.body.append(myshow());
+        document.body.append(profile());
+
+    </script>
     <section id="user_section" >
         <div>
             <img class="avatar-large" alt="avatar-large" src="https://images.unsplash.com/placeholder-avatars/large.jpg" />
@@ -25,7 +33,7 @@
         </nav>
         <section id="content">
             <div style=" width:100%;" id="display">
-                <img style="padding-left: 40%; text-align: center; padding-top: 10% ; padding-bottom: 10%;" src="img1.png" alt="no - content">
+                <img style="padding-left: 40%; text-align: center; padding-top: 10% ; padding-bottom: 10%;" src="./image/img1.png" alt="no - content">
                    </div>
         </section>
         <div style="padding-left: 42%;">
@@ -37,7 +45,7 @@
        
 
 
-    <script src="profile.js"></script>
+    <script src="./components/myprofile.js"></script>
    
 
     
