@@ -104,7 +104,7 @@
         </div>
         <input id="password" type="password"><br><br>
         <button id="login_btn2" onclick="login()">Login</button><br><br>
-        <p style=" margin-left:14% ;">Don't have a account ? <a id="a_tag" href="../Signup/">join</a> </p>
+        <p style=" margin-left:14% ;">Don't have a account ? <a id="a_tag" href="signup.html">join</a> </p>
     </div>
     <script>
         function login() {
@@ -113,7 +113,7 @@
             var password = document.getElementById("password").value
             login_data.forEach(element => {
                 if (element.Email == email && element.Password == password) {
-                    window.location.href = "#" //home page  
+                    window.location.href = "index.html" //home page  
                 }
                 else {
                     var alertmsg = document.getElementById("alertmsg")
