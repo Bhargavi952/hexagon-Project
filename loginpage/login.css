@@ -24,6 +24,10 @@ button {
     background-color: #1778f2;
     margin-bottom: -5px;
 }
+#login_btn1:hover{
+    background-color: #6199e2;
+
+}
 
 #login_btn1>a {
     text-decoration: none;
@@ -43,6 +47,9 @@ img {
 
 #a_tag {
     color: gray;
+}
+#a_tag:hover{
+    color: black;
 }
 
 #alertmsg {
