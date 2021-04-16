@@ -48,7 +48,7 @@ function header(){
 
             <div style="margin-right: 25px;" class="myscroll">
 
-                <div><a href="">Wallpapers</a></div>
+                <div><a href="wallpaper.html">Wallpapers</a></div>
                 <div><a href="">Nature</a></div>
                 <div><a href="">People</a></div>
                 <div><a href="">Architecture</a></div>

@@ -6,12 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./style/login.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
 </head>
 
 <body>
+
+
+
     <div id="alertmsg" style="display: none;">
         <button id="closeButton">X</button>
         <p style=" padding-top:0.9%; padding-left:45%;color:white;font-size:17px;">Invalid email or password.</p>
@@ -31,13 +34,13 @@
         <input id="email" type="email"><br><br>
         <div>
             <label>Password</label>
-            <a id="a_tag" style="margin-left: 23.5%;" href="../forgotPage/forgot.html">Forgot your password?</a>
+            <a id="a_tag" style="margin-left: 23.5%;" href="forgot.html">Forgot your password?</a>
         </div>
         <input id="password" type="password"><br><br>
         <button id="login_btn2" onclick="login()">Login</button><br><br>
         <p style=" margin-left:14% ;">Don't have a account ? <a id="a_tag" href="signup.html">join</a> </p>
     </div>
-    <script src="login.js"></script>
+    <script src="./components/login.js"></script>
 </body>
 
 </html>
