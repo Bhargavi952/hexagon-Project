@@ -22,7 +22,7 @@ function header(){
     <a href="index.html" target="_blank" rel="noopener noreferrer">
         <li id="one">Home</li>
     </a>
-    <a href="" target="_blank" rel="noopener noreferrer">
+    <a href="https://unsplash.com/brands" target="_blank" rel="noopener noreferrer">
 
         <li id="one">Brands</li>
     </a>
