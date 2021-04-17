@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/wallpaper.css">
     <link rel="stylesheet" href="./style/content.css">
+    <link rel="stylesheet" href="./style/myprof.css">
+    <link rel="stylesheet" href="./style/notification.css">
     <link rel="stylesheet" href="./style/threedotspop.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <title>Document</title>
@@ -27,8 +29,14 @@
 
         import { header } from "./components/header.js"
         import { wallpaper } from "./components/wallpaper.js"
+        import {profile} from './components/profile.js'
         import content from "./components/wallpaper-content.js"
+        import threeDotsPop from "./components/threedotspop.js"
+        import {Notification} from './components/notification.js'
         document.body.append(content());
+        document.body.append(threeDotsPop());
+        document.body.append(profile());
+        document.body.append(Notification())
         var header_cont = document.getElementById("header-cont");
         var wallpapers_cont = document.getElementById("wallpapers-cont")
 
@@ -103,8 +111,26 @@
     //     img.setAttribute("src",obj[0].name)
 
          //localStorage.setItem("url",JSON.stringify(files.files))
+         document.getElementById("hamberbur").addEventListener("click", function(){
+            console.log("hi")
+            appearDotsDiv()
+        })
+        let flag = 0
+        function appearDotsDiv(){
+            if(flag==0){
+                document.querySelector(".dots-div").style.display = "block"
+                flag = 1
+            }
+            else{
+                document.querySelector(".dots-div").style.display = "none"
+                flag = 0
+            }
+            
+        }
 
     </script>
+      <script src="./components/menutoggle.js"></script>
+      <script src="./components/notificationtoggle.js"></script>
 </body>
 
 </html>
