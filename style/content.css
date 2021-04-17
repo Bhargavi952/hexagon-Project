@@ -14,7 +14,7 @@ img{
 #photo-div{
     margin-bottom: 1rem;
     position: relative;
-    z-index: -10;
+    /* z-index: -10; */
 }
 #photo-download-btn{
     position: absolute;
