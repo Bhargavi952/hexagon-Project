@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/myprof.css">
+    <link rel="stylesheet" href="./style/notification.css">
+    <link rel="stylesheet" href="./style/threedotspop.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <style>
         .img-wrapper{
@@ -27,8 +30,15 @@
     <script type="module">
          import { header} from "./components/header.js"
          import  {filter} from "./components/filterfilter.js"
-     
+         import {profile} from './components/profile.js'
+         
+        import {Notification} from './components/notification.js'
+        import threeDotsPop from "./components/threedotspop.js"
+       
          document.body.append(header());
+         document.body.append(Notification());
+        document.body.append(profile());
+        document.body.append(threeDotsPop());
          let queryData = JSON.parse(localStorage.getItem("query"))
          let showmydata = document.getElementById('showmydata')
          showmydata.style.marginTop = "120px"
@@ -93,11 +103,31 @@
     })
 
   
+
+    
+    document.getElementById("hamberbur").addEventListener("click", function(){
+            console.log("hi")
+            appearDotsDiv()
+        })
+        let flag = 0
+        function appearDotsDiv(){
+            if(flag==0){
+                document.querySelector(".dots-div").style.display = "block"
+                flag = 1
+            }
+            else{
+                document.querySelector(".dots-div").style.display = "none"
+                flag = 0
+            }
+            
+        }
         
         
         
     
 
     </script>
+     <script src="./components/menutoggle.js"></script>
+     <script src="./components/notificationtoggle.js"></script>
 </body>
 </html>
