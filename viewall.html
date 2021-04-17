@@ -12,7 +12,7 @@
    <link rel="stylesheet" href="./style/pop.css">
    <link rel="stylesheet" href="./style/myprof.css">
    <link rel="stylesheet" href="./style/notification.css">
-   
+   <link rel="stylesheet" href="./style/threedotspop.css">
 
 </head>
 
@@ -45,7 +45,7 @@
         <div class="item" id="grid-item2">
             <img
                 src="https://images.unsplash.com/photo-1618102970210-cbb39395a68d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDJ8UlZaMG9hRXlRVjB8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" />
-                <button id="mybutton"><i class="fa fa-circle"></i> Open</button>
+                <a  href="Nature.html"><button style="cursor: pointer;" id="mybutton"><i class="fa fa-circle"></i> Open</button></a>
             <diV>
                 <p>
                 <h3>Nature</h3>
@@ -488,13 +488,12 @@
    
 </div>
 </body>
-
-</html>
 <script type="module">
     import {header,myshow} from "./components/header.js"
     import {pop,funcPOP} from  "./components/pop.js"
     import {profile} from './components/profile.js'
     import {Notification} from './components/notification.js'
+    import threeDotsPop from "./components/threedotspop.js"
  
    
  document.body.appendChild(header());
@@ -503,6 +502,25 @@
         document.body.append(funcPOP());
         document.body.append(profile()); 
         document.body.append(Notification());
+        document.body.append(threeDotsPop());
+        
+        document.getElementById("hamberbur").addEventListener("click", function(){
+            console.log("hi")
+            appearDotsDiv()
+        })
+        let flag = 0
+        function appearDotsDiv(){
+            if(flag==0){
+                document.querySelector(".dots-div").style.display = "block"
+                flag = 1
+            }
+            else{
+                document.querySelector(".dots-div").style.display = "none"
+                flag = 0
+            }
+            
+        }
  </script>
  <script src="./components/menutoggle.js"></script>
- <!-- <script src="./components/notificationtoggle.js"></script> -->
+ <script src="./components/notificationtoggle.js"></script>
+</html>
