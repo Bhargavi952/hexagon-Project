@@ -14,6 +14,9 @@ body{
 #user_section > div{
     margin: 30px;
 }
+#username{
+    margin-top:15px ;
+}
 .avatar-large {
 
     margin-top: 5px;
@@ -36,6 +39,7 @@ body{
 }
 #nav_div > div{
     width: 100px;
+    margin: 5px;
 }
 
 #btn1{
@@ -57,8 +61,11 @@ button{
 }
 button:hover{
     color: black;
-    font-weight: 900;
 }
 a_div1:hover{
     color: black;
+}
+#display{
+    display: flex;
+    /* justify-content: space-evenly; */
 }
