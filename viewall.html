@@ -10,6 +10,8 @@
    <link rel="stylesheet" href="./style/viewall.css">
    <link rel="stylesheet" href="./style/header.css">
    <link rel="stylesheet" href="./style/pop.css">
+   <link rel="stylesheet" href="./style/myprof.css">
+   <link rel="stylesheet" href="./style/notification.css">
    
 
 </head>
@@ -492,6 +494,7 @@
     import {header,myshow} from "./components/header.js"
     import {pop,funcPOP} from  "./components/pop.js"
     import {profile} from './components/profile.js'
+    import {Notification} from './components/notification.js'
  
    
  document.body.appendChild(header());
@@ -499,5 +502,7 @@
  document.body.append(pop());
         document.body.append(funcPOP());
         document.body.append(profile()); 
+        document.body.append(Notification());
  </script>
  <script src="./components/menutoggle.js"></script>
+ <!-- <script src="./components/notificationtoggle.js"></script> -->

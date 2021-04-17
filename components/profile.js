@@ -4,7 +4,7 @@ function profile(){
     action.innerHTML = `
     
    
-    <div class="profile" onclick="menutoggle()">
+    <div class="profile" onclick="menutoggle1()">
         <img src="image/profileimage.jpg">
     </div>
     <div class="menu">
