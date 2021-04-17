@@ -51,7 +51,7 @@ function header(){
             <div style="margin-right: 25px;" class="myscroll">
 
                 <div><a href="wallpaper.html">Wallpapers</a></div>
-                <div><a href="">Nature</a></div>
+                <div><a href="nature.html">Nature</a></div>
                 <div><a href="">People</a></div>
                 <div><a href="">Architecture</a></div>
                 <div><a href="">CurrentEvents</a></div>
