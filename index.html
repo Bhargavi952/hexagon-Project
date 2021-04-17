@@ -26,7 +26,7 @@ main
         import {pop,funcPOP} from  "./components/pop.js"
         import mainPhoto from "./components/main-photo.js"
         import content from "./components/content.js"
-    import {filter} from "./components/filter.js"
+        import {filter} from "./components/indexfilter.js"
 
         import {Notification} from './components/notification.js'
         import threeDotsPop from "./components/threedotspop.js"
@@ -67,7 +67,29 @@ main
             }
             
         }
-
+/*----------------------------------search functionality------------------------------------*/
+        // let showmydata = document.getElementById('showmydata')
+        let mydata = document.querySelector('.myinput')
+        mydata.addEventListener('keypress',function(event){
+        // showmydata.innerHTML = "";
+        if(event.key == "Enter"){
+            filter(mydata.value).then((res)=>{
+                console.log(res)
+                res.push(mydata.value)
+                localStorage.setItem("query",JSON.stringify(res))
+                window.location.href = "filter.html"
+                /* let h1 = document.createElement('h1')
+                h1.innerHTML = mydata.value
+               
+                showmydata.style.marginTop = "150px"
+                showmydata.append(h1)
+                showmydata.append(res) */
+              
+            })
+            // console.log(mydata.value)
+        }
+    })
+/*------------------------------------------------------------------------------------------*/
     </script>
   <script src="./components/menutoggle.js"></script>
   <script src="./components/notificationtoggle.js"></script>
