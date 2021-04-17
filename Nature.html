@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./style/myprof.css">
     <link rel="stylesheet" href="./style/notification.css">
     <link rel="stylesheet" href="./style/threedotspop.css">
+  
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <title>Document</title>
 </head>
@@ -28,9 +29,9 @@
     <script type="module">
 
         import { header } from "./components/header.js"
-        import { wallpaper } from "./components/wallpaper.js"
+        import { Nature } from "./components/Nature.js"
+        import content from "./components/Nature-content.js"
         import {profile} from './components/profile.js'
-        import content from "./components/wallpaper-content.js"
         import threeDotsPop from "./components/threedotspop.js"
         import {Notification} from './components/notification.js'
         document.body.append(content());
@@ -42,7 +43,7 @@
 
         header_cont.appendChild(header())
 
-        wallpaper(wallpapers_cont)
+        Nature(wallpapers_cont)
 
         document.getElementById("btn").addEventListener("click", function showMe() {
             document.getElementById("submit-btn-box").style.display = "block";
@@ -111,6 +112,7 @@
     //     img.setAttribute("src",obj[0].name)
 
          //localStorage.setItem("url",JSON.stringify(files.files))
+
          document.getElementById("hamberbur").addEventListener("click", function(){
             console.log("hi")
             appearDotsDiv()
@@ -127,10 +129,9 @@
             }
             
         }
-
     </script>
-      <script src="./components/menutoggle.js"></script>
-      <script src="./components/notificationtoggle.js"></script>
+       <script src="./components/menutoggle.js"></script>
+       <script src="./components/notificationtoggle.js"></script>
 </body>
 
 </html>

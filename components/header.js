@@ -22,7 +22,7 @@ function header(){
     <a href="index.html" target="_blank" rel="noopener noreferrer">
         <li id="one">Home</li>
     </a>
-    <a href="" target="_blank" rel="noopener noreferrer">
+    <a href="https://unsplash.com/brands" target="_blank" rel="noopener noreferrer">
 
         <li id="one">Brands</li>
     </a>
@@ -51,7 +51,7 @@ function header(){
             <div style="margin-right: 25px;" class="myscroll">
 
                 <div><a href="wallpaper.html">Wallpapers</a></div>
-                <div><a href="">Nature</a></div>
+                <div><a href="Nature.html">Nature</a></div>
                 <div><a href="">People</a></div>
                 <div><a href="">Architecture</a></div>
                 <div><a href="">CurrentEvents</a></div>

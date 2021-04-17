@@ -5,6 +5,9 @@ main
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
+    <!-- <link rel = "icon" href = 
+    "image/unslashicon1.png" 
+            type = "image/x-icon"> -->
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/pop.css">
     <link rel="stylesheet" href="./style/myprof.css">
@@ -17,7 +20,9 @@ main
 </head>
 
 <body>
-   
+    <!-- <h1 style = "color:green;">
+        GeeksforGeeks
+    </h1> -->
     <script type="module">
         import { header,myshow} from "./components/header.js"
         import {profile} from './components/profile.js'
@@ -88,7 +93,32 @@ main
             })
             // console.log(mydata.value)
         }
-    })
+    });
+
+    let mydata1 = document.querySelector('#imagesearch')
+        mydata1.addEventListener('keypress',function(event){
+        // showmydata.innerHTML = "";
+        if(event.key == "Enter"){
+            filter(mydata1.value).then((res)=>{
+                console.log(res)
+                res.push(mydata1.value)
+                localStorage.setItem("query",JSON.stringify(res))
+                window.location.href = "filter.html"
+                /* let h1 = document.createElement('h1')
+                h1.innerHTML = mydata.value
+               
+                showmydata.style.marginTop = "150px"
+                showmydata.append(h1)
+                showmydata.append(res) */
+              
+            })
+            // console.log(mydata.value)
+        }
+    });
+
+
+
+  
 /*------------------------------------------------------------------------------------------*/
     </script>
   <script src="./components/menutoggle.js"></script>
