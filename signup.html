@@ -23,7 +23,7 @@
     <script type="module">
 
         import { signup } from "./components/index.js"
-       
+
         var right_cont = document.getElementById("right-cont");
 
         signup(right_cont)
@@ -34,9 +34,11 @@
 
             join()
         })
+
+
         var users;
         users = JSON.parse(localStorage.getItem("users")) || [];
-      
+
         function join() {
 
             var userName = document.getElementById("user-name").value;
@@ -53,30 +55,64 @@
                 password_inpt.style.border = "1px solid red"
             }
 
-         
-                else if (password.length > 6) {
 
-                    function UserData(userName, firstName, lastName, password, email) {
 
-                        this.UserName = userName,
-                            this.firstName = firstName,
-                            this.lastName = lastName,
-                            this.Password = password,
-                            this.Email = email
-                    }
+            else if (password.length > 6) {
 
-                    var user = new UserData(userName, firstName, lastName, password, email)
+                var password_inpt = document.getElementById("password");
+                password_inpt.style.border = "1px solid gray";
 
-                  
+                function UserData(userName, firstName, lastName, password, email) {
 
+                    this.UserName = userName,
+                        this.firstName = firstName,
+                        this.lastName = lastName,
+                        this.Password = password,
+                        this.Email = email
+                }
+
+                var user = new UserData(userName, firstName, lastName, password, email)
+
+                if (users.length === 0) {
+                  //  alert("you are first user")
                     users.push(user)
 
                     localStorage.setItem("users", JSON.stringify(users))
-              
-                    var password_inpt = document.getElementById("password");
-                password_inpt.style.border = "1px solid gray";
 
-                window.location.href = "login.html"
+                    //alert("congratulations! you have successfully registered")
+                    window.location.href = "login.html"
+
+                }
+
+                else{
+
+                    for (var i = 0; i < users.length; i++) {
+                      
+                        if (users[i].Email === email) {
+                           
+                                alert("user already exist")
+                                break;
+                            }
+                           
+                       
+
+                        else if (users[i].Email != email) {
+                          
+                               // alert("user does not exist already,you can continue")
+                               
+                                users.push(user)
+
+                                localStorage.setItem("users", JSON.stringify(users))
+
+                                
+                                alert("congratulations! you have successfully registered")
+                                window.location.href = "login.html"
+                                break;
+                        }
+                    }
+                }
+
+
             }
         }
 
