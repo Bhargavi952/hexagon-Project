@@ -5,7 +5,6 @@ function threeDotsPop(){
     
 
     dotsDiv.innerHTML = `
-        <div class="profile">...</div>
         <div class="content-list-div">
             <ul>
                 <li>Blog</li>

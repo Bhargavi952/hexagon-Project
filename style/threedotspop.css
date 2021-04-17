@@ -6,6 +6,7 @@
     color: white;
     transform: rotate();
     border-radius: 5px;
+    display: none;
 
 
 }
