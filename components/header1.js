@@ -1,12 +1,12 @@
-function header(){
-    let head = document.createElement('div')
+function header1(){
+    let head1 = document.createElement('div')
 
-    head.innerHTML = `
+    head1.innerHTML = `
  
     <header class="my_contain">
     <nav>
     <a href="" target="_blank" rel="noopener noreferrer">
-        <img src="image/unslashicon1.png"
+        <img src="image/outerunsplash.png"
             alt="unsplash-logo">
     </a>
 
@@ -14,12 +14,11 @@ function header(){
    
    <div class="myicon" >
     <i class="fa fa-search" aria-hidden="true"></i>
-    <input   type="text" class="myinput" placeholder="Search free high-resolution photos">
-    <img src="image/google visuals.png"></a>
+    <input  style="width: 530px;" type="text" class="myinput" placeholder="Search free high-resolution photos">
      </div> 
    
 
-    <a href="index.html" target="_blank" rel="noopener noreferrer">
+    <a href="" target="_blank" rel="noopener noreferrer">
         <li id="one">Home</li>
     </a>
     <a href="" target="_blank" rel="noopener noreferrer">
@@ -27,14 +26,14 @@ function header(){
         <li id="one">Brands</li>
     </a>
     <span id="new">New</span>
-   
     <button id="hamberbur">. . .</button>
 
     <button id="submit">Submit a photo</button>
+    <span>|</span>
+
+    <a href="login.html" ><button id="log">Login</button></a>
    
-  
-   
-  
+    <a href="signup.html" ><button id="joinfree">Join Free</button></a>
    
     </div>
 </nav>
@@ -85,14 +84,14 @@ function header(){
 
     
     `
-    return head
+    return head1
 }
 
-export  {header,myshow}
+export  {header1,myshow1}
 
 
 
-function myshow(){
+function myshow1(){
    
     let scroll1 = document.querySelector(".myscroll")
 

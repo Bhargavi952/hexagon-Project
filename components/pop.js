@@ -51,7 +51,7 @@ function funcPOP(){
         console.log("clicked")
         document.querySelector('.big-modal').style.display = 'flex';
     });
-    document.querySelector('.myinput').addEventListener('',function(){
+    document.querySelector('.close').addEventListener('click',function(){
         document.querySelector('.big-modal').style.display = 'none'
     })
 }

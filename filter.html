@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <style>
+        .img-wrapper{
+
+            flex-wrap: wrap;
+            height: 400px;
+            width: 430px;
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+        h1{
+            font-size: 55px;
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+<div id="showmydata"></div>
+    <script type="module">
+         import { header} from "./components/header.js"
+         import  {filter} from "./components/filterfilter.js"
+     
+         document.body.append(header());
+         let queryData = JSON.parse(localStorage.getItem("query"))
+         let showmydata = document.getElementById('showmydata')
+         showmydata.style.marginTop = "120px"
+         showmydata.innerHTML = "";
+         showmydata.style.marginLeft = "20px"
+         let mydata = document.querySelector('.myinput')
+         mydata.value = `${queryData[queryData.length-1]}`
+        
+        
+        console.log(queryData[queryData.length-1])
+        let h1 = document.createElement("h1")
+        h1.style.marginBottom = "50px"
+        h1.innerHTML = `${queryData[queryData.length-1]}`
+        showmydata.append(h1);
+
+
+        let divWrapper = document.createElement("div")
+
+        function displayData(){
+            for(var i  = 0; i < queryData.length-1; i++){
+                var img = document.createElement("img")
+                img.src = queryData[i]
+                img.setAttribute("class","img-wrapper")
+
+                // img.style.display = "flex-wrap"
+                // img.style.gap = "50px"
+                // img.style.width = "400px"
+                // img.style.height = "400px"
+                showmydata.append(img)
+                
+            }
+
+            
+        }
+
+        displayData()
+        
+        
+
+        mydata.addEventListener('keypress',function(event){
+
+        if(event.key == "Enter"){
+            filter(mydata.value).then((res)=>{
+                showmydata.style.marginTop = "120px"
+                showmydata.innerHTML = "";
+                showmydata.style.marginLeft = "20px"
+                
+                //console.log(res)
+                let h1 = document.createElement('h1')
+                h1.innerHTML = mydata.value
+                h1.style.marginBottom = "50px"
+               
+                showmydata.style.marginTop = "150px"
+                showmydata.append(h1)
+                showmydata.append(res)
+              
+            })
+            // console.log(mydata.value)
+        }
+     
+       
+    })
+
+  
+        
+        
+        
+    
+
+    </script>
+</body>
+</html>

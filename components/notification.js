@@ -5,7 +5,7 @@ function Notification(){
     
     <div class="profile21" onclick="Alertmenutoggle();">
      
-        <a><i class="fas fa-bell"></i></a>
+        <i class="fas fa-bell"></i>
      
 
     </div>

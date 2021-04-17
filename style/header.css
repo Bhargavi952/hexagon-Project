@@ -4,6 +4,7 @@
 }
 header{
      position:fixed;
+    
     top: 0px;
     width: 100%;
    padding: 10px;
@@ -17,7 +18,7 @@ nav {
    
   
     top: 0;
-   
+   position: fixed;
     width: 100%;
     display: flex;
   
@@ -77,7 +78,18 @@ nav>div>input {
      border-radius: 15px;
      margin-left: 5px;
 }
-
+.myicon>img{
+    width: 2%;
+    margin-top: .5%;
+    background-color: rgb(243, 236, 236);
+    border-radius: 15px;
+}
+.myicon>img:hover{
+    width: 2.5%;
+    margin-top: .5%;
+    background-color: rgb(243, 236, 236);
+    border-radius: 15px;
+}
 #hamberbur {
     text-align: center;
     font-size: 15px;
@@ -121,6 +133,23 @@ nav>div>input {
  
 }
 
+#log{
+    margin-left: 5px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    background-color: white;
+}
+#joinfree{
+    margin-left: 12px;
+    padding: 5px;
+    background-color: #3cb46e;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
 /* ----------------------------------------- */
 
 
@@ -230,82 +259,3 @@ nav>div>input {
 
 /* --------------------------------- */
 
-.action{
-    position: fixed;
-    top: 5px;
-    right: 30px;
-
-}
-.action .profile{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-
-}
-.action .profile img{
-    position: absolute;
-    /* top:0;
-    left: 0; */
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    opacity: .5;
-}
-.action .menu{
-    position:absolute;
-    top: 70px;
-    right: -10px;
-  
-    padding: 10px 20px;
-    background: black;
-    width: 120px;
-    box-sizing: 0 5px 25px rgba(0,0,0.0.1);
-    /* border-radius:15px ; */
-    transition: 0.5s;
-    visibility: hidden;
-    opacity: 0;
-
-}
-.action .menu.active{
-    visibility: visible;
-    opacity: 1;
-}
-
-.action .menu::before{
-    content: '';
-    position: absolute;
-    top: -5px;
-    right: 28px;
-    width: 20px;
-       height: 20px;
-       background: black;
-       transform: rotate(45deg);
-    }
-.action .menu ul li {
- list-style: none;
- padding: 10px 0;
- border-top: 1px solid rgba(0,0,0.0.05);
- display: flex;
- /* align-items: center; */
- /* justify-content: center; */
-
-}
-.action .menu ul li img{
- max-width: 20px;
-
- opacity: 0.5;
-
-}
-.action .menu ul li a{
- display: inline-block;
- text-decoration: none;
- color: white;
-
-}
-.action .menu ul li:hover a{
- color: grey;
-}
