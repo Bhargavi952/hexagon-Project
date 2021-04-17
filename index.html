@@ -7,7 +7,8 @@ main
     <title>Index</title>
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/pop.css">
-    <!-- <link rel="stylesheet" href="./style/notification.css"> -->
+    <link rel="stylesheet" href="./style/myprof.css">
+    <link rel="stylesheet" href="./style/notification.css">
     <link rel="stylesheet" href="./style/content.css">
     <link rel="stylesheet" href="./style/main-photo.css">
     <link rel="stylesheet" href="./style/threedotspop.css">
@@ -16,27 +17,39 @@ main
 </head>
 
 <body>
-
+   
     <script type="module">
         import { header,myshow} from "./components/header.js"
         import {profile} from './components/profile.js'
+       
+        
         import {pop,funcPOP} from  "./components/pop.js"
         import mainPhoto from "./components/main-photo.js"
         import content from "./components/content.js"
+    import {filter} from "./components/filter.js"
+
         import {Notification} from './components/notification.js'
         import threeDotsPop from "./components/threedotspop.js"
 
 
+
         document.body.append(header());
         document.body.append(myshow());
+
+        // document.body.append(pop());
+        // document.body.append(funcPOP());
         document.body.append(pop());
         document.body.append(funcPOP());
         document.body.append(threeDotsPop());
+
       
         document.body.append(mainPhoto());
         document.body.append(content());
+    
+       // document.body.append(filter())
+     
+        document.body.append(Notification());
         document.body.append(profile());
-        // document.body.append(Notification());
 
         document.getElementById("hamberbur").addEventListener("click", function(){
             console.log("hi")
@@ -58,6 +71,8 @@ main
     </script>
   <script src="./components/menutoggle.js"></script>
   <script src="./components/notificationtoggle.js"></script>
+
+ 
 </body>
 
 </html>
