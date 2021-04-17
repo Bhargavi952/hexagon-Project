@@ -13,7 +13,7 @@
 
 <body>
     <!-- <div id="pop-up-box"></div> -->
-
+    <div id="a"></div>
     <div id="header-cont"></div>
 
     <div id="wallpapers-cont">
@@ -55,53 +55,30 @@
 
 
 
-        function main() {
-            // var inputFileToLoad = document.createElement("input");
-            // inputFileToLoad.type = "file";
-            // inputFileToLoad.id = "inputFileToLoad";
-            // document.body.appendChild(inputFileToLoad);
-
-            var upload_file_plus_btn = document.getElementById("upload-file-plus-btn");
-            upload_file_plus_btn.onclick = grabUrl;
-            upload_file_plus_btn.value = "upload image";
-            // document.body.appendChild(buttonLoadFile);
-        }
+        var Inpt = document.getElementById("my-files");
+        Inpt.addEventListener("change", grabUrl)
 
         function grabUrl() {
+
             var myImg = document.getElementById("my-files").files;
-            console.log(myImg)
-            if (myImg.length > 0) {
 
-                var img_to_upload = myImg[0];
+            var img_to_upload = myImg[0];
 
-                if (img_to_upload.type.match("image.*")) {
-                    var fileReader = new FileReader();
-                    fileReader.onload = function (e) {
-                        var upload_img = document.createElement("img");
-                        upload_img.src = e.target.result;
-                        upload_img.setAttribute("id", "my-img")
-                        document.getElementById("img-box").append(upload_img)
-                        // document.body.appendChild(upload_img);
-                    };
-                    fileReader.readAsDataURL(img_to_upload);
-                }
+
+            var reader = new FileReader();
+            reader.readAsDataURL(img_to_upload);
+            reader.onload = function (e) {
+
+                var img = new Image();
+                img.src = reader.result;
+
+                img.setAttribute("id","pop-up-img")
+                document.getElementById("img-box").append(img)
+
             }
+
         }
 
-        main();
-    //    var files = document.getElementById("my-files").files;
-    //    files.onchange = function() {
-
-    //     var obj = files.files
-    // console.log(obj[0])
-    //     var img = document.getElementById("my-img");
-    //     // var reader = new FileReader();
-
-    //     // reader.readAsDataURL(obj[0].name);
-
-    //     img.setAttribute("src",obj[0].name)
-
-         //localStorage.setItem("url",JSON.stringify(files.files))
 
     </script>
 </body>
