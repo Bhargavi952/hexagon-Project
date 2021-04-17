@@ -6,6 +6,7 @@
     color: white;
     transform: rotate();
     border-radius: 5px;
+    display: none;
 
 
 }
@@ -13,17 +14,31 @@
     visibility: visible;
     opacity: 1;
 }
-/* #three-dots-wrapper .dots-div::before{
+.dots-div .content-list-div::before{
     content: "";
-
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100px;
+    position: absolute;
+    top: -8px;
+    /* right: 150px; */
+    left: 40px;
+    width: 20px;
+    height: 20px;
     background: black;
     transform: rotate(45deg);
 
-} */
+}
+
+.action1 .menu1::before{
+    content: '';
+    position: absolute;
+    top:-5px;
+    right: 30px;
+    /* top: 30px;
+    right: 150px; */
+    width: 20px;
+       height: 20px;
+       background: rgb(224, 158, 158);
+       transform: rotate(45deg);
+    }
 
 .content-list-div ul{
     list-style: none;

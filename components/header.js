@@ -15,7 +15,7 @@ function header(){
    <div class="myicon" >
     <i class="fa fa-search" aria-hidden="true"></i>
     <input   type="text" class="myinput" placeholder="Search free high-resolution photos">
-    <img src="image/google visuals.png">
+    <img src="image/google visuals.png"></a>
      </div> 
    
 
@@ -28,6 +28,7 @@ function header(){
     </a>
     <span id="new">New</span>
    
+    <button id="hamberbur">. . .</button>
 
     <button id="submit">Submit a photo</button>
    
