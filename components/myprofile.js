@@ -1,6 +1,9 @@
 var like_data = JSON.parse( localStorage.getItem('likedphotos'))
+var collection_data = JSON.parse( localStorage.getItem('collectphotos'))
+
 console.log(like_data)
-var collection_data = ["https://images.unsplash.com/photo-1618450684024-55f2d7b7740a?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDJ8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+console.log(collection_data)
+var status_data = ["https://images.unsplash.com/photo-1618450684024-55f2d7b7740a?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDJ8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 "https://images.unsplash.com/photo-1543269664-76bc3997d9ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjI4NTZ8MXwxfGFsbHwxNnx8fHx8fDJ8fDE2MTg3MTUzNjk&ixlib=rb-1.2.1&q=80&w=400",
 "https://images.unsplash.com/photo-1618579858669-572597bcc560?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjI4NTZ8MHwxfGFsbHw0fHx8fHx8Mnx8MTYxODcxNTM2OQ&ixlib=rb-1.2.1&q=80&w=400"]
 
@@ -20,7 +23,7 @@ var nav = document.getElementById('profile_nav')
 var nav_div = document.getElementById('nav_div')
 nav_div.innerHTML = `<div><button onclick = "photo()"> <i class="fas fa-image"></i> Photos ${0}</button></div>
         <div><button onclick = "show(1)"><i class="fas fa-heart"></i> Likes ${like_data.length}</button></div>
-        <div><button  onclick = "show(2)"><i class="fas fa-layer-group"></i> Collections ${collection_data.length}</button></div>
+        <div><button  onclick = "show(2)"><i class="fas fa-layer-group"></i> Collections ${0}</button></div>
         <div><button  onclick = "show(3 )"><i class="fas fa-signal"></i> Status</button></div>
         `
 nav.appendChild(nav_div)
@@ -52,7 +55,7 @@ function show(val){
     else if(val==3){
         let imgs = document.getElementById("display")
        imgs.innerHTML = ""
-       for(let i =0;i<collection_data.length;i++){
+       for(let i =0;i<status_data.length;i++){
            let div1 = document.createElement("div")
               div1.innerHTML = `<img style="  height:300px ; width:430px" src=${collection_data[i]} alt="photos">`
               imgs.appendChild(div1)
