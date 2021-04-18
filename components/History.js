@@ -1,6 +1,6 @@
 
-export {Nature}
-function Nature(cont) {
+export {History}
+function History(cont) {
 
     cont.innerHTML = `
 
@@ -27,7 +27,7 @@ function Nature(cont) {
 
     <div class="box-width">
     <a class="icon"><i class="fas fa-image"></i></a> <a  class="icon-text">Contributions</a>
-    <a style="float:right; font-weight: 800; font-size: 20px; margin-right: 2%">8.5k</a>
+    <a style="float:right; font-weight: 800; font-size: 20px; margin-right: 2%">1.5k</a>
 
     </div>
 
@@ -41,7 +41,7 @@ function Nature(cont) {
 
     </div>
 
-    <div id="btn-box"><button id="btn">Submit to <a class="bold">Nature</a></button></div>
+    <div id="btn-box"><button id="btn">Submit to <a class="bold">History</a></button></div>
     </div>
    
    <div id="submit-btn-box" class="color-white"><button id="submit-btn">
@@ -52,8 +52,8 @@ function Nature(cont) {
    
    </button></div>
   
-    <h1 id="wallpaper-heading">Nature</h1><br/>
-    <p><a id="epic-drone-text">Let’s celebrate the magic of Mother Earth — with images of everything our <br> planet has to offer, from stunning seascapes, starry skies, and everything in <br> between.</a></p>
+    <h1 id="wallpaper-heading">History</h1><br/>
+    <p><a id="epic-drone-text">Powerful photographs from the past — exploring monumental moments <br/> throughout our shared history.</a></p>
     `
 }
 

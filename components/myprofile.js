@@ -1,9 +1,9 @@
 var like_data = JSON.parse( localStorage.getItem('likedphotos'))
+var collection_data = JSON.parse( localStorage.getItem('collectphotos'))
+var photos_data = JSON.parse( localStorage.getItem('images'))
+console.log(photos_data)
 console.log(like_data)
-var collection_data = ["https://images.unsplash.com/photo-1618450684024-55f2d7b7740a?ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDJ8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-"https://images.unsplash.com/photo-1543269664-76bc3997d9ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjI4NTZ8MXwxfGFsbHwxNnx8fHx8fDJ8fDE2MTg3MTUzNjk&ixlib=rb-1.2.1&q=80&w=400",
-"https://images.unsplash.com/photo-1618579858669-572597bcc560?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyMjI4NTZ8MHwxfGFsbHw0fHx8fHx8Mnx8MTYxODcxNTM2OQ&ixlib=rb-1.2.1&q=80&w=400"]
-
+console.log(collection_data)
 var userdata = JSON.parse(localStorage.getItem('User')) || []
 console.log(userdata)
 
@@ -18,22 +18,32 @@ p.innerHTML = `<p>Download free, beautiful high-quality photos curated by ${user
 div2.appendChild(p)
 var nav = document.getElementById('profile_nav')
 var nav_div = document.getElementById('nav_div')
-nav_div.innerHTML = `<div><button onclick = "photo()"> <i class="fas fa-image"></i> Photos ${0}</button></div>
+nav_div.innerHTML = `<div><button onclick = "photo()"> <i class="fas fa-image"></i> Photos ${photos_data[0].length}</button></div>
         <div><button onclick = "show(1)"><i class="fas fa-heart"></i> Likes ${like_data.length}</button></div>
         <div><button  onclick = "show(2)"><i class="fas fa-layer-group"></i> Collections ${collection_data.length}</button></div>
-        <div><button  onclick = "show(3 )"><i class="fas fa-signal"></i> Status</button></div>
+        <div><button  onclick = "status()"><i class="fas fa-signal"></i> Status</button></div>
         `
 nav.appendChild(nav_div)
+function photo(){
+    let imgs = document.getElementById("display")
+    imgs.innerHTML = ""
+     let div1 = document.createElement("div")
+        div1.innerHTML = `<img style="  height:300px ; width:400px" src=${photos_data} alt="photos">`
+        imgs.appendChild(div1)
+    
+    
+}
 
 function show(val){
     
     if(val==1){
-        let imgs = document.getElementById("display")
-        imgs.innerHTML = ""
-        for(let i =0;i<like_data.length;i++){
-         let div1 = document.createElement("div")
-            div1.innerHTML = `<img style="  height:300px ; width:430px" src=${like_data[i]} alt="likedphotos">`
-            imgs.appendChild(div1)
+            let imgs = document.getElementById("display")
+            imgs.innerHTML = ""
+            for(let i =0;i<like_data.length;i++){
+             let div1 = document.createElement("div")
+                div1.innerHTML = `<img style="  height:300px ; width:430px" src=${like_data[i]} alt="likedphotos">`
+                imgs.appendChild(div1)
+      
         }
 
       
@@ -49,18 +59,14 @@ function show(val){
    
 
     }
-    else if(val==3){
-        let imgs = document.getElementById("display")
-       imgs.innerHTML = ""
-       for(let i =0;i<collection_data.length;i++){
-           let div1 = document.createElement("div")
-              div1.innerHTML = `<img style="  height:300px ; width:430px" src=${collection_data[i]} alt="photos">`
-              imgs.appendChild(div1)
-          }
-  
-
-   }
-    
-
+   
 }
+function status(){
+    let imgs = document.getElementById("display")
+    imgs.innerHTML = ""
+    let div1 = document.createElement("div")
+    div1.innerHTML = `   <img style="width: 30%; margin-left: 500px; margin-top: 100px;margin-bottom: 100px;" src="./image/img1.png" alt="">`
+    imgs.appendChild(div1)
+}
+status()
 

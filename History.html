@@ -84,9 +84,9 @@
     </div>
     <div id="photos-cont"></div>
     <script type="module">
-        import { Nature } from "./components/Nature.js"
+        import { History } from "./components/History.js"
         import { profile } from './components/profile.js'
-        import content from "./components/Nature-content.js"
+        import content from "./components/History-content.js"
         import threeDotsPop from "./components/threedotspop.js"
         import { Notification } from './components/notification.js'
         import { header} from "./components/header.js"
@@ -100,7 +100,7 @@
         var wallpapers_cont = document.getElementById("wallpapers-cont")
 
 
-        Nature(wallpapers_cont)
+        History(wallpapers_cont)
         document.getElementById("btn").addEventListener("click", function showMe() {
             document.getElementById("submit-btn-box").style.display = "block";
         })
