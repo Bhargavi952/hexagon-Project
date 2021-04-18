@@ -2,9 +2,6 @@ var like_data = JSON.parse( localStorage.getItem('likedphotos'))
 var collection_data = JSON.parse( localStorage.getItem('collectphotos'))
 var photos_data = JSON.parse( localStorage.getItem('images'))
 console.log(photos_data)
-console.log(photos_data.length)
-
-
 console.log(like_data)
 console.log(collection_data)
 var userdata = JSON.parse(localStorage.getItem('User')) || []
@@ -21,7 +18,7 @@ p.innerHTML = `<p>Download free, beautiful high-quality photos curated by ${user
 div2.appendChild(p)
 var nav = document.getElementById('profile_nav')
 var nav_div = document.getElementById('nav_div')
-nav_div.innerHTML = `<div><button onclick = "photo()"> <i class="fas fa-image"></i> Photos ${photos_data.length}</button></div>
+nav_div.innerHTML = `<div><button onclick = "photo()"> <i class="fas fa-image"></i> Photos ${photos_data[0].length}</button></div>
         <div><button onclick = "show(1)"><i class="fas fa-heart"></i> Likes ${like_data.length}</button></div>
         <div><button  onclick = "show(2)"><i class="fas fa-layer-group"></i> Collections ${collection_data.length}</button></div>
         <div><button  onclick = "status()"><i class="fas fa-signal"></i> Status</button></div>
@@ -30,11 +27,10 @@ nav.appendChild(nav_div)
 function photo(){
     let imgs = document.getElementById("display")
     imgs.innerHTML = ""
-    for(let i =0;i<photos_data.length;i++){
      let div1 = document.createElement("div")
-        div1.innerHTML = `<img style="  height:300px ; width:430px" src=${photos_data[i]} alt="photos">`
+        div1.innerHTML = `<img style="  height:300px ; width:400px" src=${photos_data} alt="photos">`
         imgs.appendChild(div1)
-    }
+    
     
 }
 
