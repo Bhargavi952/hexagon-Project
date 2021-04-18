@@ -22,6 +22,7 @@
             <a>Submit to <a style="color: black; font-weight: 700;">Wallpapers</a></a>
 
             <div class="content-box" id="img-box">
+                <div id="upload-img-box"></div>
                 <input type="file" multiple id="my-files" accept="image/gif, image/jpeg, image/png" hidden />
 
                 <div style="display: flex" id="icon-box">
@@ -75,7 +76,7 @@
 
 
 
-    <div id="header-cont"> 
+    <div id="header-cont">
 
     </div>
 
@@ -128,8 +129,8 @@
             var myImg = document.getElementById("my-files").files;
 
             var img_to_upload = myImg[0];
-
-
+            localStorage.setItem("images", JSON.stringify(myImg[0].name))
+        
             var reader = new FileReader();
             reader.readAsDataURL(img_to_upload);
             reader.onload = function (e) {
@@ -137,8 +138,9 @@
                 var img = new Image();
                 img.src = reader.result;
 
+
                 img.setAttribute("id", "pop-up-img");
-                document.getElementById("img-box").append(img)
+                document.getElementById("upload-img-box").append(img)
 
             }
 
