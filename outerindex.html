@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 main
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,58 @@ main
     <title>Index</title>
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/pop.css">
- 
+
     <link rel="stylesheet" href="./style/content.css">
     <link rel="stylesheet" href="./style/main-photo.css">
-    
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <style>
+        .big-modal {
+            width: 100%;
+            height: 100%;
+            margin-top: -145px;
+            margin-left: -230px;
+            z-index: 9999;
+            /* background-color: rgba(0, 0, 0, 0.7); */
+            opacity: 1;
+            position: fixed;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+
+        }
+
+        .model-contain {
+            width: 560px;
+            height: 400px;
+            border-radius: 10px;
+
+
+            background-color: white;
+            position: relative;
+        }
+        #log{
+            margin-left: 35px;
+            cursor: pointer;
+        }
+        #joinfree{
+            margin-left: 35px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
 
     <script type="module">
-        import { header1,myshow1} from "./components/header1.js"
-        import {profile} from './components/profile.js'
-        import {pop,funcPOP} from  "./components/pop.js"
+        import { header1, myshow1 } from "./components/header1.js"
+        import { profile } from './components/profile.js'
+        import { pop, funcPOP } from "./components/pop.js"
         import mainPhoto from "./components/main-photo.js"
         import content from "./components/content.js"
-    // import {Notification} from './components/notification.js'
+        // import {Notification} from './components/notification.js'
 
 
         document.body.append(header1());
@@ -31,12 +68,11 @@ main
         document.body.append(funcPOP());
         document.body.append(mainPhoto());
         document.body.append(content());
-     
-      
+
+
 
     </script>
 
 </body>
 
 </html>
-

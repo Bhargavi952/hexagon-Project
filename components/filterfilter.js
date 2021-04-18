@@ -13,6 +13,11 @@ async function filter(e){
             let img = document.createElement('img')
             img.setAttribute('src',`${small}`)
             img.setAttribute("class","img-wrapper")
+
+
+
+
+
             datadiv.appendChild(img)
 
         })

@@ -9,6 +9,8 @@ header{
     width: 100%;
    padding: 10px;
     background-color: white;
+    padding-top: 30px;
+
     /* position: sticky; */
     
 }
@@ -16,7 +18,7 @@ header{
 /* ---------------------------------------- */
 nav {
    
-  
+    padding-top: 8px;
     top: 0;
    position: fixed;
     width: 100%;
@@ -28,6 +30,7 @@ nav {
     position: fixed;
    
     width: 100%;
+
   
 }
 
@@ -210,13 +213,14 @@ nav>div>input {
 }
 
 .down {
-
+    margin-top: -18px;
     right: 75px;
     border-radius: 3px 0 0 3px;
 
 }
 
 .up {
+    margin-top: -18px;
     left: 135px;
     border-radius: 3px 0 0 3px;
 }

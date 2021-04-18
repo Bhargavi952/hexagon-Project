@@ -1,8 +1,9 @@
 function content(){
     let parent = document.createElement("div")
     parent.setAttribute("id","photos-main-div")
-    let blackDiv
+
     let likedPhotosArr = JSON.parse(localStorage.getItem("likedphotos")) || []
+    let collectPhotosArr = JSON.parse(localStorage.getItem("collectphotos")) || []
     
     window.addEventListener("scroll", function(){
         let {scrollTop,scrollHeight,clientHeight} = document.documentElement
@@ -33,9 +34,23 @@ function content(){
                 collectionBtn.innerHTML = `<i class="fas fa-plus"></i>`
                 collectionBtn.setAttribute("id","photo-collection-btn")
                 collectionBtn.addEventListener("click",function(){
-                    blackDiv = document.createElement("div")
-                    blackDiv.setAttribute("class","blackDiv")
-                    parent.append(blackDiv)
+                    let flag = 0
+                    for(var i = 0; i < collectPhotosArr.length; i++){
+                        if(collectPhotosArr[i]==small){
+                            collectPhotosArr.splice(i,1)
+                            localStorage.setItem("collectphotos",JSON.stringify(collectPhotosArr))
+                            console.log("hi")
+                            flag = 1
+                            break
+                        }
+                    }
+                    if(flag==1){
+                        collectionBtn.style.backgroundColor = "white"
+                    }
+                    else{
+                        collectionBtn.style.backgroundColor = "yellow" 
+                        collectPhotos(small)
+                    }
                 })
                 let likeBtn = document.createElement("button")
                 likeBtn.innerHTML = `<i class="far fa-heart"></i>`
@@ -87,6 +102,11 @@ function content(){
         function likedPhotos(small){
             likedPhotosArr.push(small)
             localStorage.setItem("likedphotos",JSON.stringify(likedPhotosArr))
+
+        }
+        function collectPhotos(small){
+            collectPhotosArr.push(small)
+            localStorage.setItem("collectphotos",JSON.stringify(collectPhotosArr))
 
         }
     }
