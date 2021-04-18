@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 main
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,7 @@ main
     <link rel="stylesheet" href="./style/content.css">
     <link rel="stylesheet" href="./style/main-photo.css">
     <link rel="stylesheet" href="./style/threedotspop.css">
-    
+
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
@@ -24,16 +25,16 @@ main
         GeeksforGeeks
     </h1> -->
     <script type="module">
-        import { header,myshow} from "./components/header.js"
-        import {profile} from './components/profile.js'
-       
-        
-        import {pop,funcPOP} from  "./components/pop.js"
+        import { header, myshow } from "./components/header.js"
+        import { profile } from './components/profile.js'
+
+
+        import { pop, funcPOP } from "./components/pop.js"
         import mainPhoto from "./components/main-photo.js"
         import content from "./components/content.js"
-        import {filter} from "./components/indexfilter.js"
+        import { filter } from "./components/indexfilter.js"
 
-        import {Notification} from './components/notification.js'
+        import { Notification } from './components/notification.js'
         import threeDotsPop from "./components/threedotspop.js"
 
 
@@ -47,85 +48,97 @@ main
         document.body.append(funcPOP());
         document.body.append(threeDotsPop());
 
-      
+
         document.body.append(mainPhoto());
         document.body.append(content());
-    
-       // document.body.append(filter())
-     
+
+        // document.body.append(filter())
+
         document.body.append(Notification());
         document.body.append(profile());
 
-        document.getElementById("hamberbur").addEventListener("click", function(){
+        /*------------------------------threedotspopup functionality------------------------------------*/
+
+
+        document.getElementById("hamberbur").addEventListener("click", function () {
             console.log("hi")
             appearDotsDiv()
         })
         let flag = 0
-        function appearDotsDiv(){
-            if(flag==0){
+        function appearDotsDiv() {
+            if (flag == 0) {
                 document.querySelector(".dots-div").style.display = "block"
                 flag = 1
             }
-            else{
+            else {
                 document.querySelector(".dots-div").style.display = "none"
                 flag = 0
             }
-            
+
         }
-/*----------------------------------search functionality------------------------------------*/
+
+
+        /*------------------------------------------------------------------------------------------*/
+
+
+
+
+        /*----------------------------------search functionality------------------------------------*/
         // let showmydata = document.getElementById('showmydata')
         let mydata = document.querySelector('.myinput')
-        mydata.addEventListener('keypress',function(event){
-        // showmydata.innerHTML = "";
-        if(event.key == "Enter"){
-            filter(mydata.value).then((res)=>{
-                console.log(res)
-                res.push(mydata.value)
-                localStorage.setItem("query",JSON.stringify(res))
-                window.location.href = "filter.html"
-                /* let h1 = document.createElement('h1')
-                h1.innerHTML = mydata.value
-               
-                showmydata.style.marginTop = "150px"
-                showmydata.append(h1)
-                showmydata.append(res) */
-              
-            })
-            // console.log(mydata.value)
-        }
-    });
+        mydata.addEventListener('keypress', function (event) {
+            // showmydata.innerHTML = "";
+            if (event.key == "Enter") {
+                filter(mydata.value).then((res) => {
+                    console.log(res)
+                    res.push(mydata.value)
+                    localStorage.setItem("query", JSON.stringify(res))
+                    window.location.href = "filter.html"
+                    /* let h1 = document.createElement('h1')
+                    h1.innerHTML = mydata.value
+                   
+                    showmydata.style.marginTop = "150px"
+                    showmydata.append(h1)
+                    showmydata.append(res) */
 
-    let mydata1 = document.querySelector('#imagesearch')
-        mydata1.addEventListener('keypress',function(event){
-        // showmydata.innerHTML = "";
-        if(event.key == "Enter"){
-            filter(mydata1.value).then((res)=>{
-                console.log(res)
-                res.push(mydata1.value)
-                localStorage.setItem("query",JSON.stringify(res))
-                window.location.href = "filter.html"
-                /* let h1 = document.createElement('h1')
-                h1.innerHTML = mydata.value
-               
-                showmydata.style.marginTop = "150px"
-                showmydata.append(h1)
-                showmydata.append(res) */
-              
-            })
-            // console.log(mydata.value)
-        }
-    });
+                })
+                // console.log(mydata.value)
+            }
+        });
+
+        let mydata1 = document.querySelector('#imagesearch')
+        mydata1.addEventListener('keypress', function (event) {
+            // showmydata.innerHTML = "";
+            if (event.key == "Enter") {
+                filter(mydata1.value).then((res) => {
+                    console.log(res)
+                    res.push(mydata1.value)
+                    localStorage.setItem("query", JSON.stringify(res))
+                    window.location.href = "filter.html"
+                    /* let h1 = document.createElement('h1')
+                    h1.innerHTML = mydata.value
+                   
+                    showmydata.style.marginTop = "150px"
+                    showmydata.append(h1)
+                    showmydata.append(res) */
+
+                })
+                // console.log(mydata.value)
+            }
+        });
 
 
 
-  
-/*------------------------------------------------------------------------------------------*/
+
+        /*------------------------------------------------------------------------------------------*/
+
+
     </script>
-  <script src="./components/menutoggle.js"></script>
-  <script src="./components/notificationtoggle.js"></script>
+    <script src="./components/menutoggle.js"></script>
+    <script src="./components/notificationtoggle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 
- 
+
 </body>
 
 </html>
-

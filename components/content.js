@@ -1,7 +1,9 @@
 function content(){
     let parent = document.createElement("div")
     parent.setAttribute("id","photos-main-div")
+    let blackDiv
     let likedPhotosArr = JSON.parse(localStorage.getItem("likedphotos")) || []
+    
     window.addEventListener("scroll", function(){
         let {scrollTop,scrollHeight,clientHeight} = document.documentElement
         console.log({scrollTop,scrollHeight,clientHeight})
@@ -13,6 +15,7 @@ function content(){
         fetch("https://api.unsplash.com/photos?per_page=50&client_id=UpbcrkfvAmWnk62lXxPIQgP4yeg8ws7UV4UV14XSzbU")
         .then(res => res.json())
         .then(res => {
+
             for(let i = 0; i < res.length; i++){
                 let {urls:{small}} = res[i]
                 let div = document.createElement("div")
@@ -29,13 +32,37 @@ function content(){
                 let collectionBtn = document.createElement("button")
                 collectionBtn.innerHTML = `<i class="fas fa-plus"></i>`
                 collectionBtn.setAttribute("id","photo-collection-btn")
+                collectionBtn.addEventListener("click",function(){
+                    blackDiv = document.createElement("div")
+                    blackDiv.setAttribute("class","blackDiv")
+                    parent.append(blackDiv)
+                })
                 let likeBtn = document.createElement("button")
                 likeBtn.innerHTML = `<i class="far fa-heart"></i>`
                 likeBtn.setAttribute("id","photo-like-btn")
                 likeBtn.addEventListener("click",function(){
-                    likedPhotos(small)
+                    let flag = 0
+                    for(var i = 0; i < likedPhotosArr.length; i++){
+                        if(likedPhotosArr[i]==small){
+                            likedPhotosArr.splice(i,1)
+                            localStorage.setItem("likedphotos",JSON.stringify(likedPhotosArr))
+                            console.log("hi")
+                            flag = 1
+                            break
+                        }
+                    }
+                    if(flag==1){
+                        likeBtn.style.backgroundColor = "white"
+                    }
+                    else{
+                        likeBtn.style.backgroundColor = "red" 
+                        likedPhotos(small)
+                    }
                 })
                 div.append(img,downloadBtn,collectionBtn,likeBtn)
+
+
+                
                 parent.append(div)
             }
             console.log(res)
@@ -60,6 +87,7 @@ function content(){
         function likedPhotos(small){
             likedPhotosArr.push(small)
             localStorage.setItem("likedphotos",JSON.stringify(likedPhotosArr))
+
         }
     }
     getData()
