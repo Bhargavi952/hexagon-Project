@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,128 +9,165 @@
     <link rel="stylesheet" href="./style/myprof.css">
     <link rel="stylesheet" href="./style/notification.css">
     <link rel="stylesheet" href="./style/threedotspop.css">
-  
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <title>Document</title>
+    <style>
+    </style>
 </head>
-
 <body>
-    <!-- <div id="pop-up-box"></div> -->
+    <div id="pop-cont">
+        <button id="close-btn"><a><i class="fas fa-times"></i></a></button>
+        <div id="pop-up-box">
 
-    <div id="header-cont"></div>
+            <a>Submit to <a style="color: black; font-weight: 700;">Wallpapers</a></a>
 
-    <div id="wallpapers-cont">
+            <div class="content-box" id="img-box">
+                <div id="upload-img-box"></div>
+                <input type="file" multiple id="my-files" accept="image/gif, image/jpeg, image/png" hidden />
+
+                <div style="display: flex" id="icon-box">
+
+                    <label for="my-files">
+                        <img src="image.png" id="image-icon" />
+                    </label>
+                    <p>
+                    <h1 id="drag-text">Drag and drop up to 9 images<br /> or <a style="color: #007fff">Browse </a>to
+                        choose a file</h1>
+                </div>
+
+                <div style="display:flex" id="text-box">
+                    <div>
+                        <ul>
+                            <li>High quality photos (at least 5MP)</li>
+                            <li>Photos are clear & original</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Only upload photos you own the rights to</li>
+                            <li>Zero tolerance for nudity, violence or hate</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Respect the intellectual property of others</li>
+                            <li>Read the Unsplash Terms</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                </p>
+
+            </div>
+            <div class="footer">
+                <a style="float: left; color:rgb(145, 143, 143)">Read the Unsplash License</a>
+                <button
+                    style="float: right; margin-left: 0.5%; color:rgb(150, 146, 146); border:1px solid rgb(190, 189, 189)">Submit
+                    to Wallpapers</button>
+                <button
+                    style="float: right; color:rgb(150, 146, 146);  border:1px solid rgb(190, 189, 189)">Cancel</button>
+
+
+            </div>
+
+        </div>
     </div>
 
 
+
+    <div id="header-cont">
+
+    </div>
+
+    <div id="wallpapers-cont">
+    </div>
     <div id="photos-cont"></div>
-
     <script type="module">
-
-        import { header } from "./components/header.js"
         import { Nature } from "./components/Nature.js"
+        import { profile } from './components/profile.js'
         import content from "./components/Nature-content.js"
-        import {profile} from './components/profile.js'
         import threeDotsPop from "./components/threedotspop.js"
-        import {Notification} from './components/notification.js'
+        import { Notification } from './components/notification.js'
+        import { header} from "./components/header.js"
         document.body.append(content());
         document.body.append(threeDotsPop());
         document.body.append(profile());
-        document.body.append(Notification())
-        var header_cont = document.getElementById("header-cont");
+        document.body.append(Notification());
+        document.getElementById("header-cont").append(header())
+        // document.body.append(header())
+
         var wallpapers_cont = document.getElementById("wallpapers-cont")
 
-        header_cont.appendChild(header())
 
         Nature(wallpapers_cont)
-
         document.getElementById("btn").addEventListener("click", function showMe() {
             document.getElementById("submit-btn-box").style.display = "block";
-
         })
-
         document.getElementById("submit-btn").addEventListener("click", function popupToggle() {
-
-            var pop_up_box = document.getElementById("pop-up-box");
-            pop_up_box.classList.toggle('active')
+            var pop_cont = document.getElementById("pop-cont");
+            pop_cont.classList.toggle('active')
         })
-
         document.getElementById("close-btn").addEventListener("click", function popupToggle() {
 
 
-            var pop_up_box = document.getElementById("pop-up-box");
-            pop_up_box.classList.toggle('active')
+            var pop_cont = document.getElementById("pop-cont");
+            pop_cont.classList.toggle('active')
         })
 
 
 
-        function main() {
-            // var inputFileToLoad = document.createElement("input");
-            // inputFileToLoad.type = "file";
-            // inputFileToLoad.id = "inputFileToLoad";
-            // document.body.appendChild(inputFileToLoad);
-
-            var upload_file_plus_btn = document.getElementById("upload-file-plus-btn");
-            upload_file_plus_btn.onclick = grabUrl;
-            upload_file_plus_btn.value = "upload image";
-            // document.body.appendChild(buttonLoadFile);
-        }
+        var Inpt = document.getElementById("my-files");
+        Inpt.addEventListener("change", grabUrl)
 
         function grabUrl() {
+
+            var text = document.getElementById("text-box");
+            var text1 = document.getElementById("drag-text");
+            text1.style.display = "none"
+            text.style.display = "none"
+
             var myImg = document.getElementById("my-files").files;
-            console.log(myImg)
-            if (myImg.length > 0) {
 
-                var img_to_upload = myImg[0];
+            var img_to_upload = myImg[0];
+            localStorage.setItem("images", JSON.stringify(myImg[0].name))
+        
+            var reader = new FileReader();
+            reader.readAsDataURL(img_to_upload);
+            reader.onload = function (e) {
 
-                if (img_to_upload.type.match("image.*")) {
-                    var fileReader = new FileReader();
-                    fileReader.onload = function (e) {
-                        var upload_img = document.createElement("img");
-                        upload_img.src = e.target.result;
-                        upload_img.setAttribute("id", "my-img")
-                        document.getElementById("img-box").append(upload_img)
-                        // document.body.appendChild(upload_img);
-                    };
-                    fileReader.readAsDataURL(img_to_upload);
-                }
+                var img = new Image();
+                img.src = reader.result;
+
+
+                img.setAttribute("id", "pop-up-img");
+                document.getElementById("upload-img-box").append(img)
+
             }
+
         }
 
-        main();
-    //    var files = document.getElementById("my-files").files;
-    //    files.onchange = function() {
-
-    //     var obj = files.files
-    // console.log(obj[0])
-    //     var img = document.getElementById("my-img");
-    //     // var reader = new FileReader();
-
-    //     // reader.readAsDataURL(obj[0].name);
-
-    //     img.setAttribute("src",obj[0].name)
-
-         //localStorage.setItem("url",JSON.stringify(files.files))
-
-         document.getElementById("hamberbur").addEventListener("click", function(){
+        document.getElementById("hamberbur").addEventListener("click", function () {
             console.log("hi")
             appearDotsDiv()
         })
         let flag = 0
-        function appearDotsDiv(){
-            if(flag==0){
+        function appearDotsDiv() {
+            if (flag == 0) {
                 document.querySelector(".dots-div").style.display = "block"
                 flag = 1
             }
-            else{
+            else {
                 document.querySelector(".dots-div").style.display = "none"
                 flag = 0
             }
-            
         }
     </script>
-       <script src="./components/menutoggle.js"></script>
-       <script src="./components/notificationtoggle.js"></script>
-</body>
 
+    <script src="./components/menutoggle.js"></script>
+    <script src="./components/notificationtoggle.js"></script>
+
+</body>
 </html>
+
+
