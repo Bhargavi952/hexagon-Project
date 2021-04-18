@@ -124,7 +124,7 @@ function myshow(){
             document.querySelector(".up").style.display = "block"
         }
 
-        if (event.srcElement.scrollLeft > 1261) {
+        if (event.srcElement.scrollLeft > 1178) {
             document.querySelector(".up").style.display = "block"
             document.querySelector(".down").style.display = "none"
         } else {

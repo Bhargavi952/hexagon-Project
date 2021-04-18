@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,9 @@
     <link rel="stylesheet" href="./style/threedotspop.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <title>Document</title>
+    <style>
+    </style>
 </head>
-
 <body>
     <div id="pop-cont">
         <button id="close-btn"><a><i class="fas fa-times"></i></a></button>
@@ -81,13 +81,8 @@
 
     <div id="wallpapers-cont">
     </div>
-
-
     <div id="photos-cont"></div>
-
     <script type="module">
-
-        import { header } from "./components/header.js"
         import { wallpaper } from "./components/wallpaper.js"
         import { profile } from './components/profile.js'
         import content from "./components/wallpaper-content.js"
@@ -104,18 +99,13 @@
 
 
         wallpaper(wallpapers_cont)
-
         document.getElementById("btn").addEventListener("click", function showMe() {
             document.getElementById("submit-btn-box").style.display = "block";
-
         })
-
         document.getElementById("submit-btn").addEventListener("click", function popupToggle() {
-
             var pop_cont = document.getElementById("pop-cont");
             pop_cont.classList.toggle('active')
         })
-
         document.getElementById("close-btn").addEventListener("click", function popupToggle() {
 
 
@@ -169,12 +159,10 @@
                 flag = 0
             }
         }
-
     </script>
 
     <script src="./components/menutoggle.js"></script>
     <script src="./components/notificationtoggle.js"></script>
 
 </body>
-
 </html>

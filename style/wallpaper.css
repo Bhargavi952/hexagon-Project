@@ -1,7 +1,6 @@
 #header-cont{
     width: 100%;
     height: 130px;
-  
 }
 #wallpapers-cont{
     width: 96%;
@@ -13,13 +12,11 @@
     width: 100%;
     margin-top: 7%;
 }
-
 #wallpaper-heading{
 font-size: 46px;
 font-weight: bold;
 font-style: normal;
 }
-
 #epic-drone-text{
 font-size: 18px;
 font-weight: 500;
@@ -50,7 +47,6 @@ background-color: black;
 color: white;
 border-radius: 5px;
 font-size: 15px
-
 }
 #left-cont{
     float: right;
@@ -63,9 +59,7 @@ font-size: 15px
 #btn-box{
     width: 87%;
     margin-left: 13%;
-       
 }
-
 #open{
     width: 60px;
     padding: 4px 4px ;
@@ -95,7 +89,6 @@ font-size: 15px
      margin-left:0%;
      margin-left: 80%;
      display:none;
-     
 }
 #submit-btn{
     width: 100%;
@@ -185,7 +178,6 @@ margin-left: 2%
 #my-files{
     border-radius: 50%;
 }
-
 #text-box{
     padding-left: 15%;
     padding-right: 5%;
