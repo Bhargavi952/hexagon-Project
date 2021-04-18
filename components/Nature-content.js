@@ -1,7 +1,6 @@
 function content(){
     let parent = document.createElement("div")
     parent.setAttribute("id","photos-main-div")
-    let likedPhotosArr = JSON.parse(localStorage.getItem("likedphotos")) || []
     window.addEventListener("scroll", function(){
         let {scrollTop,scrollHeight,clientHeight} = document.documentElement
         console.log({scrollTop,scrollHeight,clientHeight})
@@ -10,11 +9,12 @@ function content(){
         }
     })
     function getData(){
-        fetch("https://api.unsplash.com/photos?per_page=50&client_id=UpbcrkfvAmWnk62lXxPIQgP4yeg8ws7UV4UV14XSzbU")
+        fetch("https://api.unsplash.com/search/photos?query=Nature&client_id=UpbcrkfvAmWnk62lXxPIQgP4yeg8ws7UV4UV14XSzbU")
         .then(res => res.json())
         .then(res => {
-            for(let i = 0; i < res.length; i++){
-                let {urls:{small}} = res[i]
+            console.log(res.results)
+            for(let i = 0; i <res.results.length; i++){
+                let {urls:{small}} = res.results[i]
                 let div = document.createElement("div")
                 div.setAttribute("id","photo-div")
                 let img = document.createElement("img")
@@ -32,13 +32,10 @@ function content(){
                 let likeBtn = document.createElement("button")
                 likeBtn.innerHTML = `<i class="far fa-heart"></i>`
                 likeBtn.setAttribute("id","photo-like-btn")
-                likeBtn.addEventListener("click",function(){
-                    likedPhotos(small)
-                })
                 div.append(img,downloadBtn,collectionBtn,likeBtn)
                 parent.append(div)
             }
-            console.log(res)
+          
         })
         function myImageLike(small){
             axios({
@@ -57,12 +54,8 @@ function content(){
                 document.body.removeChild(link)
             })
         }
-        function likedPhotos(small){
-            likedPhotosArr.push(small)
-            localStorage.setItem("likedphotos",JSON.stringify(likedPhotosArr))
-        }
     }
-    getData()
-    return parent
+  getData()
+ return parent
 }
 export default content
