@@ -7,6 +7,8 @@ function login() {
     login_data.forEach(element => {
         if (element.Email == email && element.Password == password) {
             flag = 1
+        localStorage.setItem('User',JSON.stringify(element))
+
         }
         
 
@@ -14,7 +16,7 @@ function login() {
 
     if(flag==1){
         window.location.href = "index.html" //home page 
-        localStorage.setItem('User',JSON.stringify(element))
+        // localStorage.setItem('User',JSON.stringify(element))
     }
     else{
         var alertmsg = document.getElementById("alertmsg")
