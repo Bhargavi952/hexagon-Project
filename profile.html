@@ -7,16 +7,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style/profile.css">
     <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/pop.css">
+    <link rel="stylesheet" href="./style/myprof.css">
+    <link rel="stylesheet" href="./style/notification.css">
+    <link rel="stylesheet" href="./style/content.css">
+    <link rel="stylesheet" href="./style/main-photo.css">
+    <link rel="stylesheet" href="./style/threedotspop.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 
 </head>
 <body>
     <script type="module">
-import { header,myshow} from "./components/header.js"
+import { header} from "./components/header.js"
 import {profile} from './components/profile.js'
+
+        import {Notification} from './components/notification.js'
+        import threeDotsPop from "./components/threedotspop.js"
        document.body.append(header());
-        document.body.append(myshow());
+        // document.body.append(myshow());
         document.body.append(profile());
+        document.body.append(threeDotsPop());
+        document.body.append(Notification());
+        
+        document.getElementById("hamberbur").addEventListener("click", function(){
+            console.log("hi")
+            appearDotsDiv()
+        })
+        let flag = 0
+        function appearDotsDiv(){
+            if(flag==0){
+                document.querySelector(".dots-div").style.display = "block"
+                flag = 1
+            }
+            else{
+                document.querySelector(".dots-div").style.display = "none"
+                flag = 0
+            }
+            
+        }
+
 
     </script>
     <section id="user_section" >
@@ -37,7 +66,7 @@ import {profile} from './components/profile.js'
             <div style=" width:100%; height: 300px;" id="display"></div>
         </section>
         <div style="padding-left: 42%;margin-top: 30px;">
-            <a href="index.html"> <img style="padding-left:8.5% ;"
+            <a href="index.html"> <img style="padding-left:6.5% ; width: 10%;"
                 src="https://unsplash.com/assets/core/logo-black-df2168ed0c378fa5506b1816e75eb379d06cfcd0af01e07a2eb813ae9b5d7405.svg"
                 alt="logo"> </a>   <!-- homepage -->
             <p style="color: gray;">Make something awesome</p>
@@ -46,7 +75,9 @@ import {profile} from './components/profile.js'
 
 
     <script src="./components/myprofile.js"></script>
-    <!-- <script src="./components/menutoggle.js"></script> -->
+    <script src="./components/menutoggle.js"></script>
+  <script src="./components/notificationtoggle.js"></script>
+
 
     
 </body>
