@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <style>
     </style>
 </head>
+
 <body>
     <div id="pop-cont">
         <button id="close-btn"><a><i class="fas fa-times"></i></a></button>
@@ -61,8 +63,8 @@
 
             </div>
             <div class="footer">
-                <a style="float: left; color:rgb(145, 143, 143)">Read the Unsplash License</a>
-                <button
+                <a style="float: left; color:rgb(145, 143, 143); margin-top: 0.3%">Read the Unsplash License</a>
+                <button id="submit"
                     style="float: right; margin-left: 0.5%; color:rgb(150, 146, 146); border:1px solid rgb(190, 189, 189)">Submit
                     to Wallpapers</button>
                 <button
@@ -89,7 +91,7 @@
         import content from "./components/wallpaper-content.js"
         import threeDotsPop from "./components/threedotspop.js"
         import { Notification } from './components/notification.js'
-        import { header} from "./components/header.js"
+        import { header } from "./components/header.js"
         document.body.append(content());
         document.body.append(threeDotsPop());
         document.body.append(profile());
@@ -120,8 +122,10 @@
         var Inpt = document.getElementById("my-files");
         Inpt.addEventListener("change", grabUrl)
 
-        function grabUrl() {
 
+
+        function grabUrl() {
+            var arrImg;
             var text = document.getElementById("text-box");
             var text1 = document.getElementById("drag-text");
             text1.style.display = "none"
@@ -130,8 +134,7 @@
             var myImg = document.getElementById("my-files").files;
 
             var img_to_upload = myImg[0];
-            localStorage.setItem("images", JSON.stringify(myImg[0].name))
-        
+
             var reader = new FileReader();
             reader.readAsDataURL(img_to_upload);
             reader.onload = function (e) {
@@ -141,7 +144,16 @@
 
 
                 img.setAttribute("id", "pop-up-img");
-                document.getElementById("upload-img-box").append(img)
+                document.getElementById("upload-img-box").append(img);
+
+                var submit_btn = document.getElementById("submit");
+                submit_btn.style.backgroundColor = "black";
+                submit_btn.style.color = "white";
+
+                arrImg = JSON.parse(localStorage.getItem("images")) || [];
+
+                arrImg.push(myImg[0].name)
+                localStorage.setItem("images", JSON.stringify(arrImg))
 
             }
 
@@ -162,12 +174,17 @@
                 flag = 0
             }
         }
+
+        document.getElementById("submit").addEventListener("click", function submitImg() {
+
+            window.location.href = "profile.html"
+        })
+
     </script>
 
     <script src="./components/menutoggle.js"></script>
     <script src="./components/notificationtoggle.js"></script>
 
 </body>
+
 </html>
-
-
