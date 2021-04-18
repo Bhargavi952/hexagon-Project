@@ -19,23 +19,29 @@ function History(cont) {
 
     <div class="box-width">
     <a class="icon"><i class="fas fa-user-alt"></i></a> <a class="icon-text">Curator</a>
+    <a><img src="image (2).png" style="width: 29px; height: 23px; float: right"/></a>
+
     </div>
 
     <div class="line"></div>
 
     <div class="box-width">
     <a class="icon"><i class="fas fa-image"></i></a> <a  class="icon-text">Contributions</a>
+    <a style="float:right; font-weight: 800; font-size: 20px; margin-right: 2%">1.5k</a>
+
     </div>
 
     <div class="line"></div>
 
     <div class="box-width">
     <a class="icon"><i class="fas fa-user-friends"></i></a> <a class="icon-text">Top contributors</a>
-    </div>
+    <a><img src="image (3).png" style="width: 120px; height: 20px; float:right"/></a>
 
     </div>
 
-    <div id="btn-box"><button id="btn">Submit to <a class="bold">Wallpapers</a></button></div>
+    </div>
+
+    <div id="btn-box"><button id="btn">Submit to <a class="bold">History</a></button></div>
     </div>
    
    <div id="submit-btn-box" class="color-white"><button id="submit-btn">
