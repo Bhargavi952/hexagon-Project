@@ -14,8 +14,11 @@
     <div class="main-cont">
 
         <div class="left-cont">
-            <img src="https://images.unsplash.com/9/barcelona-traffic.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max"/>
-                <div><p id="a">bfjbgvfjlkhgvjh</p></div>
+            <img
+                src="https://images.unsplash.com/9/barcelona-traffic.jpg?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" />
+            <div>
+                <p id="a">bfjbgvfjlkhgvjh</p>
+            </div>
         </div>
         <div id="right-cont"></div>
     </div>
@@ -55,9 +58,21 @@
                 password_inpt.style.border = "1px solid red"
             }
 
+            else if (password.length >= 6 && userName == "") {
+                alert("Please enter your user name")
+            }
+            else if (password.length >= 6 && firstName == "") {
+                alert("Please enter your first name")
+            }
 
+            else if (password.length >= 6 && lastName == "") {
+                alert("Please enter your last name")
+            }
 
-            else if (password.length > 6) {
+            else if (password.length >= 6 && email == "") {
+                alert("Please enter your email")
+            }
+            else if (password.length >= 6 && userName != "" && firstName != "" && lastName != "" && email != "") {
 
                 var password_inpt = document.getElementById("password");
                 password_inpt.style.border = "1px solid gray";
@@ -74,7 +89,7 @@
                 var user = new UserData(userName, firstName, lastName, password, email)
 
                 if (users.length === 0) {
-                  //  alert("you are first user")
+                    //  alert("you are first user")
                     users.push(user)
 
                     localStorage.setItem("users", JSON.stringify(users))
@@ -84,30 +99,32 @@
 
                 }
 
-                else{
+                else {
 
                     for (var i = 0; i < users.length; i++) {
-                      
+
                         if (users[i].Email === email) {
-                           
-                                alert("user already exist")
-                                break;
+
+                            alert("user already exist,Please register with another Email Id")
+                            break;
+                        }
+
+
+
+                        else {
+                            if (users[i].Email != email) {
                             }
-                           
-                       
 
-                        else if (users[i].Email != email) {
-                          
-                               // alert("user does not exist already,you can continue")
-                               
-                                users.push(user)
+                            // alert("user does not exist already,you can continue")
 
-                                localStorage.setItem("users", JSON.stringify(users))
+                            users.push(user)
 
-                                
-                                alert("congratulations! you have successfully registered")
-                                window.location.href = "login.html"
-                                break;
+                            localStorage.setItem("users", JSON.stringify(users))
+
+
+                            alert("congratulations! you have successfully registered")
+                            window.location.href = "login.html"
+                            break;
                         }
                     }
                 }
