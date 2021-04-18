@@ -66,6 +66,7 @@ a_div1:hover{
     color: black;
 }
 #display{
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     /* justify-content: space-evenly; */
 }
