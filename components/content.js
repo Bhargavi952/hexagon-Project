@@ -1,6 +1,7 @@
 function content(){
     let parent = document.createElement("div")
     parent.setAttribute("id","photos-main-div")
+    let likedPhotosArr = JSON.parse(localStorage.getItem("likedphotos")) || []
     window.addEventListener("scroll", function(){
         let {scrollTop,scrollHeight,clientHeight} = document.documentElement
         console.log({scrollTop,scrollHeight,clientHeight})
@@ -31,6 +32,9 @@ function content(){
                 let likeBtn = document.createElement("button")
                 likeBtn.innerHTML = `<i class="far fa-heart"></i>`
                 likeBtn.setAttribute("id","photo-like-btn")
+                likeBtn.addEventListener("click",function(){
+                    likedPhotos(small)
+                })
                 div.append(img,downloadBtn,collectionBtn,likeBtn)
                 parent.append(div)
             }
@@ -53,8 +57,12 @@ function content(){
                 document.body.removeChild(link)
             })
         }
+        function likedPhotos(small){
+            likedPhotosArr.push(small)
+            localStorage.setItem("likedphotos",JSON.stringify(likedPhotosArr))
+        }
     }
-  getData()
- return parent
+    getData()
+    return parent
 }
 export default content

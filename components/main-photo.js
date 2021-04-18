@@ -6,8 +6,8 @@ function mainPhoto(){
         <div id="main-photo-content">
             <span>Unsplash</span>
             <h1>The internet’s source of <a href="#">freely-usable images.</a> <br>Powered by creators everywhere.</h1>
+
             <input id="imagesearch" type="text" placeholder="Search free high-resolution photos">
-            <p>Trending:flowerwallpapersbackgroundshappylove</p>
         </div>
     `
     return mainPhotoDiv
