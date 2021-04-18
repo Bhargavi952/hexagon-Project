@@ -52,7 +52,7 @@ function header(){
 
                 <div><a href="wallpaper.html">Wallpapers</a></div>
                 <div><a href="Nature.html">Nature</a></div>
-                <div><a href="">People</a></div>
+                <div><a href=">People</a></div>
                 <div><a href="">Architecture</a></div>
                 <div><a href="">CurrentEvents</a></div>
                 <div><a href="">Business&Work</a></div>
@@ -70,7 +70,7 @@ function header(){
                 <div><a href="">Athelatics</a></div>
                 <div><a href="">Spirituadivty</a></div>
                 <div><a href="">Art&Culture</a></div>
-                <div><a href="">History</a></div>
+                <div><a href="History.html"">History</a></div>
 
 
 
