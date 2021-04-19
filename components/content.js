@@ -48,7 +48,7 @@ function content(){
                         collectionBtn.style.backgroundColor = "white"
                     }
                     else{
-                        collectionBtn.style.backgroundColor = "yellow" 
+                        collectionBtn.style.backgroundColor = "green" 
                         collectPhotos(small)
                     }
                 })

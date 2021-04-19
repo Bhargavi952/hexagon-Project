@@ -12,7 +12,7 @@ function pop(){
          <div class="griditem">Ramaadan</div>
          <div class="griditem">Boy</div>
          </div>
-         <p id="second">Treanding Searches </P>
+         <p id="second">Trending Searches </P>
          <div class="grid1">
          <div class="griditem1">Gita</div>
          <div class="griditem1">quran</div>
