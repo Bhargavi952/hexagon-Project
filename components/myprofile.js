@@ -18,7 +18,7 @@ p.innerHTML = `<p>Download free, beautiful high-quality photos curated by ${user
 div2.appendChild(p)
 var nav = document.getElementById('profile_nav')
 var nav_div = document.getElementById('nav_div')
-nav_div.innerHTML = `<div><button onclick = "photo()"> <i class="fas fa-image"></i> Photos ${photos_data[0].length}</button></div>
+nav_div.innerHTML = `<div><button onclick = "photo()"> <i class="fas fa-image"></i> Photos ${photos_data.length}</button></div>
         <div><button onclick = "show(1)"><i class="fas fa-heart"></i> Likes ${like_data.length}</button></div>
         <div><button  onclick = "show(2)"><i class="fas fa-layer-group"></i> Collections ${collection_data.length}</button></div>
         <div><button  onclick = "status()"><i class="fas fa-signal"></i> Status</button></div>
