@@ -1,99 +1,76 @@
-function header(){
+function header() {
     let head = document.createElement('div')
 
     head.innerHTML = `
  
     <header class="my_contain">
-    <nav>
-    <a href="" target="_blank" rel="noopener noreferrer">
-        <img src="image/unslashicon1.png"
-            alt="unsplash-logo">
-    </a>
-
-
-   
-   <div class="myicon" >
-    <i class="fa fa-search" aria-hidden="true"></i>
-    <input   type="text" class="myinput" placeholder="Search free high-resolution photos">
-    <img src="image/google visuals.png"></a>
-     </div> 
+        <nav>
+            <a href="" target="_blank" rel="noopener noreferrer">
+                <img src="image/unslashicon1.png" alt="unsplash-logo">
+            </a>
+            <div class="myicon">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" class="myinput" placeholder="Search free high-resolution photos">
+                <img src="image/google visuals.png">
+            </div> 
    
 
-    <a href="index.html" target="_blank" rel="noopener noreferrer">
-        <li id="one">Home</li>
-    </a>
-    <a href="https://unsplash.com/brands" target="_blank" rel="noopener noreferrer">
-
-        <li id="one">Brands</li>
-    </a>
-    <span id="new">New</span>
-   
-    <button id="hamberbur">. . .</button>
-
-    <button id="submit">Submit a photo</button>
-   
-  
-   
-  
-   
-    </div>
-</nav>
-
-    <div class="container youscroll">
-
-        <div class="align">
-            <p>Editorial</p> 
-          
-            
-            <a style="margin-left: 15px; text-decoration: none; color:black" href="#">Following</a>
-            <p class="arrow up">&#10094;</p>
-
-            <div style="margin-right: 25px;" class="myscroll">
-
-                <div><a href="wallpaper.html">Wallpapers</a></div>
-                <div><a href="Nature.html">Nature</a></div>
-                <div><a href=">People</a></div>
-                <div><a href="">Architecture</a></div>
-                <div><a href="">CurrentEvents</a></div>
-                <div><a href="">Business&Work</a></div>
-                <div><a href="">Experimental</a></div>
-                <div><a href="">Fashion</a></div>
-                <div><a href="">Film</a></div>
-                <div><a href="">Health&Wellness</a></div>
-                <div><a href="">Interiors</a></div>
-                <div><a href="">StreetPhotography</a></div>
-                <div><a href="">Technology</a></div>
-                <div><a href="">Travel</a></div>
-                <div><a href="">Textures&Patterns</a></div>
-                <div><a href="">Animals</a></div>
-                <div><a href="">Food&Drinks</a></div>
-                <div><a href="">Athelatics</a></div>
-                <div><a href="">Spirituadivty</a></div>
-                <div><a href="">Art&Culture</a></div>
-                <div><a href="History.html"">History</a></div>
-
-
-
-
-            </div>
-            <p class="arrow down">&#10095;</p>
-            <a style="margin-right: 18px; text-decoration: none; color:black" href="viewall.html">ViewAll</a>
-        </div>
-    </div>
-</header>
-
-
+            <a href="index.html" target="_blank" rel="noopener noreferrer">
+                <li id="one">Home</li>
+            </a>
+            <a href="https://unsplash.com/brands" target="_blank" rel="noopener noreferrer">
+                <li id="one">Brands</li>
+            </a>
+            <span id="new">New</span>
     
+            <button id="hamberbur">. . .</button>
+
+            <button id="submit">Submit a photo</button>
+        </nav>
+
+        <div class="container youscroll">
+            <div class="align">
+                <p>Editorial</p> 
+                <a style="margin-left: 15px; text-decoration: none; color:black" href="#">Following</a>
+                <p class="arrow up">&#10094;</p>
+                <div style="margin-right: 25px;" class="myscroll">
+                    <div><a href="wallpaper.html">Wallpapers</a></div>
+                    <div><a href="Nature.html">Nature</a></div>
+                    <div><a href=">People</a></div>
+                    <div><a href="">Architecture</a></div>
+                    <div><a href="">CurrentEvents</a></div>
+                    <div><a href="">Business&Work</a></div>
+                    <div><a href="">Experimental</a></div>
+                    <div><a href="">Fashion</a></div>
+                    <div><a href="">Film</a></div>
+                    <div><a href="">Health&Wellness</a></div>
+                    <div><a href="">Interiors</a></div>
+                    <div><a href="">StreetPhotography</a></div>
+                    <div><a href="">Technology</a></div>
+                    <div><a href="">Travel</a></div>
+                    <div><a href="">Textures&Patterns</a></div>
+                    <div><a href="">Animals</a></div>
+                    <div><a href="">Food&Drinks</a></div>
+                    <div><a href="">Athelatics</a></div>
+                    <div><a href="">Spirituadivty</a></div>
+                    <div><a href="">Art&Culture</a></div>
+                    <div><a href="History.html"">History</a></div>
+                </div>
+                <p class="arrow down">&#10095;</p>
+                <a style="margin-right: 18px; text-decoration: none; color:black" href="viewall.html">ViewAll</a>
+            </div>
+        </div>
+    </header>
     `
     return head
 }
 
-export  {header,myshow}
+export { header, myshow }
 
 
 
-function myshow(){
-   
+function myshow() {
+
     let scroll1 = document.querySelector(".myscroll")
 
 
@@ -124,7 +101,7 @@ function myshow(){
             document.querySelector(".up").style.display = "block"
         }
 
-        if (event.srcElement.scrollLeft > 1178) {
+        if (event.srcElement.scrollLeft > 1094) {
             document.querySelector(".up").style.display = "block"
             document.querySelector(".down").style.display = "none"
         } else {
@@ -136,8 +113,7 @@ function myshow(){
 
 
 
- 
+
 }
 
 
-   
