@@ -1,4 +1,12 @@
 # Unplash Clone
+we have cloned Unplash website. Unsplash is a website dedicated to sharing stock photography and it allows photographers to upload photos to its website.
+
+## Contributors:
+- [Mohit Rawat](https://github.com/mohit512661)
+- [Jagrathi Panchal](https://github.com/JagratiPanchal)
+- [Pawan Patidar](https://github.com/pawanpatidar21)
+- [Bhargavi](https://github.com/Bhargavi952)
+
 ## Tech Stack 
 
 To create this clone following Tech stack is used.
